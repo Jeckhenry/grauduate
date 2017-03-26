@@ -28,12 +28,13 @@ exports.showDetails = (req,res)=>{
 var resdata1;
 exports.message = (req,res,next)=>{
     resdata1 = {
-        statusCode:0,
+        statusCode:'',
         msg:''
     }
     next()
 }
 exports.testAdd = (req,res)=>{
+        resdata1.statusCode = 0
         test.findOne(req.body).then((result)=>{
             if(!result){
                 test.create(req.body,(err)=>{
@@ -73,6 +74,7 @@ exports.showTestings = (req,res)=>{
 }
 //网址操作
 exports.addSite = (req,res)=>{
+    resdata1.statusCode = 1
     sites.findOne(req.body).then((result)=>{
         if (!result){
             sites.create(req.body,(err)=>{
@@ -96,6 +98,13 @@ exports.addSite = (req,res)=>{
 exports.showInter = (req,res)=>{
     sites.find({}).then((result)=>{
         res.render('main/sites',{
+            sites:result
+        })
+    })
+}
+exports.showInters = (req,res)=>{
+    sites.find({}).then((result)=>{
+        res.render('index/internet',{
             sites:result
         })
     })

@@ -3,6 +3,7 @@
  */
 const user = require('../model/user')
 const test = require('../model/test')
+const sites = require('../model/site')
 var resdata;
 exports.initData = (req,res,next)=>{
     resdata = {
@@ -151,7 +152,6 @@ exports.deletemsg = (req,res)=>{
         if (err){
             return
         }
-        res.render('main/testing')
     })
 }//题库的删除操作
 exports.deletemsg2 = (req,res)=>{
@@ -162,3 +162,23 @@ exports.deletemsg2 = (req,res)=>{
         }
     })
 }//用户的删除操作
+exports.deletesite = (req,res)=>{
+    var contion = req.body.middle;
+    sites.remove({_id:contion},(err,req)=>{
+        if (err){
+            return
+        }
+    })
+}
+exports.changesite = (req,res)=>{
+    var site = req.body.site
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{site:site}}
+    sites.update(oldValue,newValue,function(err,result){
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}

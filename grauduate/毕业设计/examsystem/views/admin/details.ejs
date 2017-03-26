@@ -27,6 +27,7 @@
             <li><a href="/admin/test" target="_blank">题库</a></li>
             <li><a href="/admin/site" target="_blank">网址库</a></li>
         </ul>
+        <div>
         <h3>添加题目模块：</h3>
         <form action="/admin/addtest" method="post" class="form-horizontal center">
         <div class="form-group">
@@ -68,9 +69,14 @@
         <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
             <button class="btn btn-primary" type="submit">确认添加</button>
         </div>
+            <%if(mes.statusCode===0){%>
+            <p class="msg"><%=mes.msg%></p>
+            <%}%>
     </form>
-        <p class="msg"><%=mes.msg%></p>
+        </div>
         <!--设置其他模块的后台操作-->
+        <div>
+            <br>
         <h3>添加网址模块：</h3>
         <form action="/admin/addsite" method="post" class="form-horizontal center">
             <div class="form-group">
@@ -82,8 +88,11 @@
             <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
                 <button class="btn btn-primary" type="submit">确认添加</button>
             </div>
+            <%if(mes.statusCode===1){%>
             <p class="msg"><%=mes.msg%></p>
+            <%}%>
         </form>
+        </div>
 </div>
 
 

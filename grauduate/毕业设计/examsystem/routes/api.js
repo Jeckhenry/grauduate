@@ -18,4 +18,6 @@ router.post('/delete',route.deletemsg)
 router.post('/delete2',route.deletemsg2)
 router.post('/changemsg',route.changemsg)
 router.post('/changemsg2',route.changemsg2)
+router.post('/delsite',route.deletesite)
+router.post('/changesite',route.changesite)
 module.exports = router

@@ -13,6 +13,7 @@ router.get('/details',route.showDetails)
 router.get('/testing',route.showTesting)
 router.get('/tests',route.showTestings)
 router.get('/site',route.showInter)
+router.get('/sites',route.showInters)
 router.post('/addtest',route.testAdd)
 router.post('/addsite',route.addSite)
 module.exports = router
