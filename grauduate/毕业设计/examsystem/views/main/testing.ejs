@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/testing.css">
+    <title>测试中....</title>
+</head>
+<body>
+<div class="container">
+    <div class="row martop">
+        <div class="col-lg-6 col-lg-push-6">
+            欢迎<span class="glyphicon glyphicon-user"></span><span id="username"></span>来到测试系统!
+            <p class="message"></p>
+            <button class="btn btn-danger" id="out">退出</button>
+        </div>
+    </div>
+    <div class="row testtop">
+        <div class="col-lg-4">
+            <h3>注意事项：</h3>
+            <p>1、测试过程中请注意时间</p>
+            <p>2、请确保完成每一道题目</p>
+            <p>3、请慎重选择，每一道试题您只有一次机会</p>
+            <p>4、答题过程中请不要刷新页面</p>
+            <p>5、点击开始按钮即开始测试，倒计时开启</p>
+            <button id="begin" class="btn btn-warning">开始测试</button>
+        </div>
+        <div class="col-lg-8 as">
+            <div id="suggest">
+                测试前请仔细阅读注意事项！
+            </div>
+            <div id="test" style="display: none">
+                <div>倒计时：<span class="daoji"></span></div>
+                <div class="testing">
+                <p class="p1"></p>、&nbsp;<span class="span1"></span>
+                <p class="answerques">
+                    <label>
+                        <input type="radio" name="ans">
+                        A <span class="span2"></span>
+                    </label>
+                    <label>
+                        <input type="radio" name="ans">
+                        B <span class="span3"></span>
+                    </label>
+                    <label>
+                        <input type="radio" name="ans">
+                        C <span class="span4"></span>
+                    </label>
+                    <label>
+                        <input type="radio" name="ans">
+                        D <span class="span5"></span>
+                    </label>
+                </p>
+                </div>
+                <button class="btn btn-info" id="next">下一题</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="waring" style="display: none">
+    <div class="result">
+        <div class="col-lg-1 col-lg-push-11 wartop text-center btn">
+            <span class="glyphicon glyphicon-remove"></span>
+        </div>
+        <div class="testresult">
+            <h2>恭喜您完成测试！</h2>
+            <p>正确的题目数：<span class="rightan"></span></p>
+            <p>错误的题目数：<span class="erran"></span></p>
+            <div class="comeon"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/testing.js"></script>
+</body>
+</html>

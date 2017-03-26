@@ -1,0 +1,96 @@
+*{
+    font-family: "宋体";
+    margin:0;
+    padding:0;
+}
+body{
+    background-image: url("../../img/bg.jpg");
+}
+.martop{
+    margin-top: 7%;
+    font-size: 2em;
+}
+.martop span{
+    color: blue;
+}
+.as{
+    height:400px;
+}
+.testtop{
+    margin-top: 2%;
+}
+#suggest{
+    text-align: center;
+    line-height: 400px;
+    font-size: 3em;
+    color: red;
+}
+#test{
+    font-size: 2em;
+    padding:50px;
+}
+#test p:nth-of-type(1){
+    display: inline-block;
+}
+#test button{
+    margin-left: 50%;
+    margin-top: 10%;
+}
+#out{
+    margin-left: 50%;
+}
+.testing label{
+    font-size: 0.8em;
+    font-weight:500;
+}
+#waring{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top:0;
+    left:0;
+}
+#waring .result{
+    width:50%;
+    height:50%;
+    margin:auto;
+    margin-top: 10%;
+    background: white;
+}
+.wartop{
+    margin-top: 2%;
+    border:1px solid black;
+    background: #f9ffd1;
+}
+.testresult{
+    padding-top: 5%;
+}
+.testresult h2,p{
+    margin-left: 5%;
+}
+.testresult p{
+    margin-top: 4%;
+    font-size: 1.2em;
+}
+.testresult p:nth-of-type(1){
+    color: green;
+    font-weight: 700;
+}
+.testresult p:nth-of-type(1) span{
+    font-size: 2em;
+    font-weight: 800;
+}
+.testresult p:nth-of-type(2){
+    color: red;
+    font-weight: 700;
+}
+.testresult p:nth-of-type(2) span{
+    font-size: 2em;
+    font-weight: 800;
+}
+.comeon{
+    margin-left: 5%;
+    font-size: 2.4em;
+    color: #09abff;
+}

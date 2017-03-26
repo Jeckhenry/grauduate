@@ -1,0 +1,22 @@
+*{
+    font-family: "宋体";
+    margin:0;
+    padding:0;
+}
+.character{
+    text-align: left;
+    font-size:3em;
+    margin-top: 2%;
+}
+.del{
+    width:45%;
+}
+.cha{
+    width:45%;
+}
+
+
+
+
+
+

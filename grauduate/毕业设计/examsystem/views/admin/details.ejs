@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/test/details.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="firstwid">
+    <div class="container">
+        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+            <img src="/img/top1_r1_c1.gif" alt="..">
+        </div>
+        <div class="col-lg-6 visible-lg character">
+            后台管理系统
+            <button id="back" class="btn btn-danger">退出</button>
+        </div>
+    </div>
+    <!--题库操作部分-->
+    <div class="container">
+        <ul id="nav" class="clearfix">
+            <li><a href="/admin/details">操作数据库</a></li>
+            <li><a href="/admin/admin" target="_blank">用户列表</a></li>
+            <li><a href="/admin/test" target="_blank">题库</a></li>
+            <li><a href="/admin/site" target="_blank">网址库</a></li>
+        </ul>
+        <h3>添加题目模块：</h3>
+        <form action="/admin/addtest" method="post" class="form-horizontal center">
+        <div class="form-group">
+            <label for="ask" class="col-md-2 control-label">题目内容：</label>
+            <div class="col-md-4">
+                <input type="text" id="ask" class="form-control" placeholder="请输入题目内容" name="ask">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="answers1" class="col-md-2 control-label">选项A：</label>
+            <div class="col-md-4">
+                <input type="text" id="answers1" class="form-control" placeholder="题目选项1" name="answers1">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="answers2" class="col-md-2 control-label">选项B：</label>
+            <div class="col-md-4">
+                <input type="text" id="answers2" class="form-control" placeholder="题目选项2" name="answers2">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="answers3" class="col-md-2 control-label">选项C：</label>
+            <div class="col-md-4">
+                <input type="text" id="answers3" class="form-control" placeholder="题目选项3" name="answers3">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="answers4" class="col-md-2 control-label">选项D：</label>
+            <div class="col-md-4">
+                <input type="text" id="answers4" class="form-control" placeholder="题目选项4" name="answers4">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="rightanswer" class="col-md-2 control-label">答案：</label>
+            <div class="col-md-4">
+                <input type="text" id="rightanswer" class="form-control" placeholder="请输入正确答案" name="rightanswer">
+            </div>
+        </div>
+        <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+            <button class="btn btn-primary" type="submit">确认添加</button>
+        </div>
+    </form>
+        <p class="msg"><%=mes.msg%></p>
+        <!--设置其他模块的后台操作-->
+        <h3>添加网址模块：</h3>
+        <form action="/admin/addsite" method="post" class="form-horizontal center">
+            <div class="form-group">
+                <label for="site" class="col-md-2 control-label">网址：</label>
+                <div class="col-md-4">
+                    <input type="text" id="site" class="form-control" placeholder="请输入网址" name="site">
+                </div>
+            </div>
+            <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                <button class="btn btn-primary" type="submit">确认添加</button>
+            </div>
+            <p class="msg"><%=mes.msg%></p>
+        </form>
+</div>
+
+
+
+
+
+
+
+</div>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/test/details.js"></script>
+</body>
+</html>
