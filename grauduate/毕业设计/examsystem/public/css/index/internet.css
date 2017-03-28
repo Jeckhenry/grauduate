@@ -49,9 +49,8 @@
 	width: 95%;
 	margin: 0 auto;
 	height:370px;
-	overflow-y: scroll;
-	overflow-x: hidden;
 	margin-top: 2%;
+	position: relative;
 }
 #message ul{
 	list-style: none;
@@ -61,4 +60,9 @@
 	display: block;
 	text-decoration: none;
 	color: black;
+}
+#page_navigation{
+	position: absolute;
+	bottom:10%;
+	left:0;
 }

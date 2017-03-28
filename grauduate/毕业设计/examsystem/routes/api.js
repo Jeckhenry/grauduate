@@ -20,4 +20,6 @@ router.post('/changemsg',route.changemsg)
 router.post('/changemsg2',route.changemsg2)
 router.post('/delsite',route.deletesite)
 router.post('/changesite',route.changesite)
+router.post('/changeteach',route.changeTeach)
+router.post('/delteach',route.delTeacher)
 module.exports = router

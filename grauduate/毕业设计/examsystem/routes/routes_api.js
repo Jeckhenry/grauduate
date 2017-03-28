@@ -4,6 +4,7 @@
 const user = require('../model/user')
 const test = require('../model/test')
 const sites = require('../model/site')
+const teacher = require('../model/teacher')
 var resdata;
 exports.initData = (req,res,next)=>{
     resdata = {
@@ -175,6 +176,34 @@ exports.changesite = (req,res)=>{
     var oldValue = {_id:req.body.middle}
     var newValue = {$set:{site:site}}
     sites.update(oldValue,newValue,function(err,result){
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+//教师信息的删除
+exports.delTeacher = (req,res)=>{
+    var contion = req.body.middle;
+    teacher.remove({_id:contion},(err,req)=>{
+        if (err){
+            return
+        }
+    })
+}
+exports.changeTeach = (req,res)=>{
+    var name = req.body.name,
+        sexs = req.body.sex,
+        births = req.body.birth,
+        academics = req.body.academic,
+        tel = req.body.tel,
+        email = req.body.emails,
+        abstract = req.body.abs;
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{teachname:name,sex:sexs,birth:births,academic:academics,
+    tel:tel,email:email,abstract:abstract}}
+    teacher.update(oldValue,newValue,function(err,result){
         if (err){
             console.log(err)
             return

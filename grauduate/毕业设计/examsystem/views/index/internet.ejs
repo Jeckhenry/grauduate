@@ -2,13 +2,14 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initialscale=1,maximum-scale=1,">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 		<link rel="stylesheet" href="/css/index/reset.css" />
 		<link rel="stylesheet" href="/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="/css/index/internet.css" />
+		<link rel="stylesheet" href="/css/pageys.css">
 		<title>C语言精品课程--相关网站</title>
 	</head>
-	<body class="bodyback" ng-app="app">
+	<body class="bodyback">
 		<div class="container firwid">
 			<div class="row">
 				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">
@@ -117,18 +118,10 @@
 					<div class="text-left">
 						相关网站：
 					</div>
-					<div id="message" ng-controller="myapp">
-						<!--<ul ng-repeat="add in internet">-->
-							<!--<li class="row">-->
-								<!--<a href="{{add.address}}" class="col-lg-6">-->
-									<!--{{add.address}}-->
-								<!--</a>-->
-								<!--<a class="col-lg-6 hidden-md hidden-sm hidden-xs text-right">-->
-									<!--······················-->
-								<!--</a>-->
-							<!--</li>-->
-						<!--</ul>-->
-						<ul>
+					<div id="message">
+						<input type='hidden' id='current_page' />
+						<input type='hidden' id='show_per_page' />
+						<ul id="content">
 							<%for(var i=0;i<sites.length;i++){%>
 							<li class="row">
 								<a href="<%=sites[i].site%>" class="col-lg-6">
@@ -140,15 +133,17 @@
 							</li>
 							<%}%>
 						</ul>
+						<div id='page_navigation'></div>
 					</div>
 					
 				</div>
 			</div>
 
 		</div>
-		<script type="text/javascript" src="/js/jquery-3.1.1.min.js" ></script>
+		<script type="text/javascript" src="/js/jquery_1.9.js" ></script>
 		<script type="text/javascript" src="/js/bootstrap.min.js" ></script>
 		<script type="text/javascript" src="/js/angular_1.5.8.min.js" ></script>
 		<script type="text/javascript" src="/js/index/internet.js" ></script>
+		<script type="text/javascript" src="/js/pagesystem.js"></script>
 	</body>
 </html>

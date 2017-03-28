@@ -4,6 +4,9 @@
 const user = require('../model/user')
 const test = require('../model/test')
 const sites = require('../model/site')
+const teachers = require('../model/teacher')
+const formidable = require('formidable')
+const fs = require('fs')
 //此页面添加网站后台其他部分的路由
 exports.showAdmin = (req,res)=>{
         user.find({}).then((result)=>{
@@ -108,4 +111,79 @@ exports.showInters = (req,res)=>{
             sites:result
         })
     })
+}
+//教师模块
+exports.showTeachers = (req,res)=>{
+    teachers.find({}).then((result)=>{
+        res.render('index/teachers',{
+            teachman:result
+        })
+    })
+}
+exports.showTeacher = (req,res)=>{
+    teachers.find({}).then((result)=>{
+        res.render('main/teacher',{
+            teachmen:result
+        })
+    })
+}
+exports.addTeacher = (req,res)=>{
+    resdata1.statusCode = 2
+    var img_path
+    //上传教师图片
+    if(req.url==='/addteacher'&&req.method.toLocaleLowerCase()=='post'){
+        var form = new formidable.IncomingForm();
+        form.uploadDir='./tmp'
+        form.parse(req, function(err, fields, files) {
+            var oldpath = files.file.path
+            var newpath = "./public/img/"+files.file.name
+            img_path = files.file.name
+            console.log(img_path)
+            if(!files.file.type.includes('image')){
+                resdata1.msg = '请上传图片类型'
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+                return
+            }
+            if(files.file.size/1000>3000){
+                resdata1.msg = '图片不得大于3M'
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+                return
+            }
+            fs.rename(oldpath,newpath,function(err){
+                resdata1.msg = '上传成功'
+                //允许有同名同姓的教师存在
+                var name = fields["teachname"],
+                    sexs = fields["teachsex"],
+                    births = fields["teachbir"],
+                    academics = fields["teachacade"],
+                    tel = fields["teachtel"],
+                    email = fields["teachemail"],
+                    img = img_path,
+                    abstract = fields["teachabs"];
+                teachers.create({
+                    teachname:name,
+                    sex:sexs,
+                    birth:births,
+                    academic:academics,
+                    tel:tel,
+                    email:email,
+                    abstract:abstract,
+                    img:img
+                },(err)=>{
+                    if (err){
+                        resdata1.msg = '添加失败'
+                        return
+                    }
+                    resdata1.msg = '添加成功'
+                })
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+            })
+        });
+    }
 }

@@ -12,18 +12,3 @@ $(function(){
 	
 	
 });
-var app = angular.module("app",[]);
-	app.controller("myapp",["$scope",function($scope){
-		$scope.internet = [
-			{
-				id:1,
-				address:"http://www.baidu.com"
-			},{
-				id:2,
-				address:"qqqq"
-			},{
-				id:3,
-				address:'dfsdfd'
-			}
-		]
-	}]);

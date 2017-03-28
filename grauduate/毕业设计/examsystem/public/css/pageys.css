@@ -1,0 +1,20 @@
+#content{
+    line-height: 2em;
+}
+#page_navigation a{
+    display: inline-block;
+    padding:3px;
+    border:1px solid gray;
+    margin:2px;
+    color:black;
+    text-decoration:none
+}
+.active_page{
+    background: #09abff;
+    color:white !important;
+}
+.page_link{
+    display: inline-block;
+    width:30px;
+    text-align: center;
+}

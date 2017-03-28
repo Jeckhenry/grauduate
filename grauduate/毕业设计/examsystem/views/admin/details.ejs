@@ -26,6 +26,7 @@
             <li><a href="/admin/admin" target="_blank">用户列表</a></li>
             <li><a href="/admin/test" target="_blank">题库</a></li>
             <li><a href="/admin/site" target="_blank">网址库</a></li>
+            <li><a href="/admin/teacher" target="_blank">教师信息库</a></li>
         </ul>
         <div>
         <h3>添加题目模块：</h3>
@@ -92,6 +93,67 @@
             <p class="msg"><%=mes.msg%></p>
             <%}%>
         </form>
+        </div>
+        <!--教师信息-->
+        <div>
+            <br>
+            <h3>添加教师模块：</h3>
+            <form action="/admin/addteacher" method="post" enctype="multipart/form-data" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="teachname" class="col-md-2 control-label">姓名：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachname" class="form-control" placeholder="请输入教师姓名" name="teachname">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachsex" class="col-md-2 control-label">性别：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachsex" class="form-control" placeholder="请输入教师性别" name="teachsex">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachbir" class="col-md-2 control-label">出生年月：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachbir" class="form-control" placeholder="请输入教师出生年月" name="teachbir">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachacade" class="col-md-2 control-label">职称：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachacade" class="form-control" placeholder="请输入教师职称" name="teachacade">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachtel" class="col-md-2 control-label">电话：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachtel" class="form-control" placeholder="请输入电话" name="teachtel">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachemail" class="col-md-2 control-label">邮箱：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachemail" class="form-control" placeholder="请输入email" name="teachemail">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachabs" class="col-md-2 control-label">简介：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachabs" class="form-control" placeholder="请输入教师简介" name="teachabs">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="file" class="col-sm-2 control-label">上传教师图片</label>
+                    <div class="col-sm-10">
+                        <input type="file" name="file" id="file">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===2){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
         </div>
 </div>
 

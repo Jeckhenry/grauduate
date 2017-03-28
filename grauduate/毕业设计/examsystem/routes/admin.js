@@ -4,6 +4,8 @@
 const express = require('express')
 const router = express.Router();
 const route = require('./routes_admin')
+var multipart=require('connect-multiparty');
+var multipartMidd=multipart();
 
 router.use(route.message)
 router.use(route.message2)
@@ -14,6 +16,9 @@ router.get('/testing',route.showTesting)
 router.get('/tests',route.showTestings)
 router.get('/site',route.showInter)
 router.get('/sites',route.showInters)
+router.get('/teachers',route.showTeachers)
+router.get('/teacher',route.showTeacher)
 router.post('/addtest',route.testAdd)
 router.post('/addsite',route.addSite)
+router.post('/addteacher',route.addTeacher)
 module.exports = router
