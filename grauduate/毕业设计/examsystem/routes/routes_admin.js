@@ -6,6 +6,7 @@ const test = require('../model/test')
 const sites = require('../model/site')
 const teachers = require('../model/teacher')
 const formidable = require('formidable')
+const classes = require('../model/class')
 const fs = require('fs')
 //此页面添加网站后台其他部分的路由
 exports.showAdmin = (req,res)=>{
@@ -186,4 +187,38 @@ exports.addTeacher = (req,res)=>{
             })
         });
     }
+}
+exports.addClass = (req,res)=>{
+    resdata1.statusCode = 3
+    var clasmsg = req.body.classmsg,
+        clasfeater = req.body.feater,
+        clasteaching = req.body.teaching;
+    classes.create({
+        classmsg:clasmsg,
+        feater:clasfeater,
+        teaching:clasteaching
+    },(err)=>{
+        if (err){
+            resdata1.msg = '添加失败'
+            return
+        }
+        resdata1.msg = '添加成功'
+    })
+    res.render('admin/details',{
+        mes:resdata1
+    })
+}
+exports.showClasses = (req,res)=>{
+    classes.find({}).then((result)=>{
+        res.render('main/classmsg',{
+            clmsg:result
+        })
+    })
+}
+exports.showClassess = (req,res)=>{
+    classes.find({}).then((result)=>{
+        res.render('index/classmsg',{
+            classmsg:result
+        })
+    })
 }

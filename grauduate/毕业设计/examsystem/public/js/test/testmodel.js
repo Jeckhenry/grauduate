@@ -2,6 +2,9 @@
  * Created by sunshine on 2017/3/14.
  */
 $(function(){
+    $('.abs').each(function () {
+        $(this).text($(this).text().substring(0,8)+'.....')
+    })
     $('.del').click(function(){
         $('#middle').val($(this).parent().parent().find('td:first').text())
         var $_middle = $('#middle').val()

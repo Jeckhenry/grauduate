@@ -5,6 +5,7 @@ const user = require('../model/user')
 const test = require('../model/test')
 const sites = require('../model/site')
 const teacher = require('../model/teacher')
+const classes = require('../model/class')
 var resdata;
 exports.initData = (req,res,next)=>{
     resdata = {
@@ -204,6 +205,21 @@ exports.changeTeach = (req,res)=>{
     var newValue = {$set:{teachname:name,sex:sexs,birth:births,academic:academics,
     tel:tel,email:email,abstract:abstract}}
     teacher.update(oldValue,newValue,function(err,result){
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+
+exports.changeClass = (req,res)=>{
+    var classmsg = req.body.classmsg,
+        classfea = req.body.feater,
+        classteac = req.body.teaching;
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{classmsg:classmsg,feater:classfea,teaching:classteac}}
+    classes.update(oldValue,newValue,function(err,result){
         if (err){
             console.log(err)
             return

@@ -22,4 +22,5 @@ router.post('/delsite',route.deletesite)
 router.post('/changesite',route.changesite)
 router.post('/changeteach',route.changeTeach)
 router.post('/delteach',route.delTeacher)
+router.post('/changeclass',route.changeClass)
 module.exports = router

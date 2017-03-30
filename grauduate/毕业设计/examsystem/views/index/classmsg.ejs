@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" href="/css/index/reset.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/index/internet.css" />
+    <link rel="stylesheet" href="/css/index/teacher.css">
+    <link rel="stylesheet" href="/css/pageys.css">
+    <title>C语言精品课程--课程介绍</title>
+    <style>
+        #content li{
+            position: relative;
+            height:300px;
+            overflow-y: scroll;
+        }
+        .li_img{
+            position: absolute;
+            right: 20px;
+            top:0;
+            border:1px solid black;
+        }
+        .tab{
+            width:95%;
+            margin:0 auto;
+            border:1px solid black;
+        }
+        .tab tr td{
+            border:1px solid black;
+        }
+        .tab tr td:nth-of-type(1){
+            width:20%;
+            font-size: 1.3em;
+            text-align: center;
+            font-weight:700;
+            line-height: 2em;
+        }
+        #page_navigation{
+            z-index: 123;
+        }
+        .msg{
+            text-indent: 2em;
+            line-height: 2em;
+        }
+    </style>
+</head>
+<body class="bodyback">
+<div class="container firwid">
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">
+            <a href="/main">管理员入口</a>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7 text-right" id="nowtime">
+        </div>
+    </div>
+    <div class="row zbimgback">
+        <div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
+            <a href="/"><img src="/img/zbdxtb.jpg.png" class="zbimg"></a>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 cyuyan text-center">
+            中北大学c语言精品课程
+        </div>
+    </div>
+    <div class="row">
+        <nav class="navbar navbar-default">
+
+            <div class="col-lg-12 col-md-12" id="daohanglan">
+                <ul class="nav nav-tabs">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            相关介绍
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="">课程介绍</a>
+                            </li>
+                            <li>
+                                <a href="">教师队伍</a>
+                            </li>
+                            <li>
+                                <a href="">教材建设</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            教学方式
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="">课堂教学</a>
+                            </li>
+                            <li>
+                                <a href="">双语教学</a>
+                            </li>
+                            <li>
+                                <a href="">实验教学</a>
+                            </li>
+                            <li>
+                                <a href="">网络教学</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            教学资源
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="">教学录像</a>
+                            </li>
+                            <li>
+                                <a href="/main">试卷分析</a>
+                            </li>
+                            <li>
+                                <a href="/admin/sites">相关网站</a>
+                            </li>
+                            <li>
+                                <a href="">成果展示</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            教学管理
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="">考试改革</a>
+                            </li>
+                            <li>
+                                <a href="">教学改革</a>
+                            </li>
+                            <li>
+                                <a href="">教学管理</a>
+                            </li>
+                            <li>
+                                <a href="">教学效果</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="row martop" style="background: white;">
+        <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+            <div class="text-left">
+                课程介绍：
+            </div>
+            <div id="message">
+                <input type='hidden' id='current_page' />
+                <input type='hidden' id='show_per_page' />
+                <ul id="content">
+                    <li>
+                        <h3 class="text-center">《C语言程序设计》课程简介</h3>
+                        <div class="msg">
+                            <%=classmsg[0].classmsg%>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="text-center">《C语言程序设计》课程特色</h3>
+                        <div class="msg">
+                            <%=classmsg[0].feater%>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="text-center">《C语言程序设计》课程理念</h3>
+                        <div class="msg">
+                            <%=classmsg[0].teaching%>
+                        </div>
+                    </li>
+                </ul>
+                <div id='page_navigation'></div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="/js/jquery_1.9.js" ></script>
+<script type="text/javascript" src="/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="/js/angular_1.5.8.min.js" ></script>
+<script type="text/javascript" src="/js/index/internet.js" ></script>
+<script type="text/javascript" src="/js/index/teacherpage.js"></script>
+</body>
+</html>

@@ -27,6 +27,7 @@
             <li><a href="/admin/test" target="_blank">题库</a></li>
             <li><a href="/admin/site" target="_blank">网址库</a></li>
             <li><a href="/admin/teacher" target="_blank">教师信息库</a></li>
+            <li><a href="/admin/class" target="_blank">课程信息库</a></li>
         </ul>
         <div>
         <h3>添加题目模块：</h3>
@@ -151,6 +152,38 @@
                     <button class="btn btn-primary" type="submit">确认添加</button>
                 </div>
                 <%if(mes.statusCode===2){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--课程信息模块-->
+        <div>
+            <br>
+            <h3>添加课程模块：</h3>
+            <h5 style="color: red;" class="text-center">友情提示：课程模块只提交一次，之后的修改请进入具体页面进行！！否则无法生效！</h5>
+            <form action="/admin/addclass" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="classmsg" class="col-md-2 control-label">课程简介：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="classmsg" class="form-control" placeholder="请输入课程信息" name="classmsg">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="feater" class="col-md-2 control-label">课程特色：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="feater" class="form-control" placeholder="请输入课程特色" name="feater">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teaching" class="col-md-2 control-label">教学理念：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teaching" class="form-control" placeholder="请输入教学理念" name="teaching">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===3){%>
                 <p class="msg"><%=mes.msg%></p>
                 <%}%>
             </form>
