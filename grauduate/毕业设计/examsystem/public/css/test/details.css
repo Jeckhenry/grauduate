@@ -19,7 +19,7 @@ body{
 }
 .character{
     text-align: left;
-    font-size:3em;
+    font-size:2em;
     margin-top: 2%;
 }
 .container{
@@ -28,24 +28,6 @@ body{
 .center{
     width:70%;
     margin:0 auto;
-}
-#nav{
-    list-style: none;
-    font-size:1.7em;
-   padding-bottom: 10px;
-    padding-top: 10px;
-}
-#nav li{
-    float: left;
-    border-bottom:1px solid black;
-    margin-left: 2%;
-}
-#nav li a{
-    text-decoration: none;
-    color: black;
-}
-#nav li a:hover{
-    color: red;
 }
 .clearfix:after{
     visibility: hidden;
@@ -62,7 +44,14 @@ body{
     margin-top: 5%;
 }
 #back{
-    margin-left: 20%;
+    margin-left: 80%;
+}
+.nav-pills a{
+    color: black;
+    font-size: 1.04em;
+}
+.nav-pills a:hover{
+    color: red;
 }
 
 

@@ -6,6 +6,9 @@ const test = require('../model/test')
 const sites = require('../model/site')
 const teacher = require('../model/teacher')
 const classes = require('../model/class')
+const build = require('../model/bookbuild')
+const summary = require('../model/summary')
+const reference = require('../model/reference')
 var resdata;
 exports.initData = (req,res,next)=>{
     resdata = {
@@ -220,6 +223,65 @@ exports.changeClass = (req,res)=>{
     var oldValue = {_id:req.body.middle}
     var newValue = {$set:{classmsg:classmsg,feater:classfea,teaching:classteac}}
     classes.update(oldValue,newValue,function(err,result){
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+//对教材建设历程进行操作
+exports.changebuild = (req,res)=>{
+    var classmsg = req.body.auhtname,
+        classfea = req.body.bkname_ele_,
+        classteac = req.body.pub;
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{author:classmsg,bookname:classfea,publisher:classteac}}
+    build.update(oldValue,newValue,function(err,result){
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+exports.delbuild = (req,res)=>{
+    var contion = req.body.middle;
+    build.remove({_id:contion},(err,req)=>{
+        if (err){
+            return
+        }
+    })
+}
+//对教材参考信息进行操作
+exports.changerefe = (req,res)=>{
+    var classmsg = req.body.auhtname;
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{bookmsg:classmsg}}
+    reference.update(oldValue,newValue,function(err,result){
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+exports.delrefe = (req,res)=>{
+    var contion = req.body.middle;
+    reference.remove({_id:contion},(err,req)=>{
+        if (err){
+            return
+        }
+    })
+}
+exports.changesum = (req,res)=>{
+    var classmsg = req.body.auhtname,
+        classfea = req.body.bkname_ele_,
+        classteac = req.body.pub,
+        item_ele = req.body.item;
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{summary:classmsg,pre:classfea,after:classteac,item:item_ele}}
+    summary.update(oldValue,newValue,function(err,result){
         if (err){
             console.log(err)
             return

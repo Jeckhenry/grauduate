@@ -24,7 +24,7 @@
             margin-top: 2%;
         }
     </style>
-    <title>教师信息库</title>
+    <title>教材参考信息</title>
 </head>
 <body>
 <div class="container">
@@ -33,7 +33,7 @@
             <img src="/img/top1_r1_c1.gif" alt="..">
         </div>
         <div class="col-lg-6 visible-lg character">
-            教师信息库
+            教材参考信息
         </div>
     </div>
     <hr/>
@@ -44,28 +44,14 @@
         <table class="table table-bordered table-responsive model">
             <thead>
             <th class="text-center">ID</th>
-            <th class="text-center">姓名</th>
-            <th class="text-center">性别</th>
-            <th class="text-center">出生年月</th>
-            <th class="text-center">职称</th>
-            <th class="text-center">电话</th>
-            <th class="text-center">邮箱</th>
-            <th class="text-center">简介</th>
-            <th class="text-center">图片</th>
+            <th class="text-center">参考书信息</th>
             <th class="text-center">操作</th>
             </thead>
             <tbody>
-            <%for(var i=0;i<teachmen.length;i++){%>
+            <%for(var i=0;i<refe.length;i++){%>
             <tr>
-                <td><%=teachmen[i]._id%></td>
-                <td class="ar" name="teachname"><%=teachmen[i].teachname%></td>
-                <td class="ar" name="teachsex"><%=teachmen[i].sex%></td>
-                <td class="ar" name="teachbirth"><%=teachmen[i].birth%></td>
-                <td class="ar" name="teachacademic"><%=teachmen[i].academic%></td>
-                <td class="ar" name="teachtel"><%=teachmen[i].tel%></td>
-                <td class="ar" name="teachemail"><%=teachmen[i].email%></td>
-                <td class="ar abs" name="teachabstract"><%=teachmen[i].abstract%></td>
-                <td class="abs"><%=teachmen[i].img%></td>
+                <td><%=refe[i]._id%></td>
+                <td class="ar" name="bokmsg"><%=refe[i].bookmsg%></td>
                 <td  class="text-center">
                     <input type="button" class="del btn" value="删除"></input>
                     <input type="button" class="cha btn" value="修改"></input>
@@ -81,6 +67,6 @@
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.js"></script>
 <script src="/js/angular_1.5.8.min.js"></script>
-<script src="/js/test/teacher.js"></script>
+<script src="/js/test/reference.js"></script>
 </body>
 </html>

@@ -39,6 +39,10 @@
         .table tr:nth-of-type(1){
             text-align: center;
         }
+        .textar{
+            line-height: 2em;
+            text-indent: 2em;
+        }
     </style>
 </head>
 <body class="bodyback">
@@ -175,23 +179,40 @@
                         <td>教材名称</td>
                         <td>出版社</td>
                         </tr>
+                        <%for(var i=0;i<booklist.length;i++){%>
+                        <tr>
+                            <td><%=booklist[i].author%></td>
+                            <td><%=booklist[i].bookname%></td>
+                            <td><%=booklist[i].publisher%></td>
+                        </tr>
+                        <%}%>
                     </table>
                     </li>
                     <li class="artimsg">
                         <h3>内容简介</h3>
-
+                       <div class="textar"><%=sumlist[0].summary%></div>
                     </li>
                     <li class="bookpre">
                         <h3>教材前言</h3>
+                        <div class="textar"><%=sumlist[0].pre%></div>
                     </li>
                     <li class="bookafter">
                         <h3>教材后记</h3>
+                       <div class="textar"> <%=sumlist[0].after%></div>
                     </li>
                     <li class="bookcolor">
                         <h3> 教材特色</h3>
+                       <div class="textar"><%=sumlist[0].item%></div>
                     </li>
                     <li class="reader">
                         <h3> 教材与参考书</h3>
+                        <table style="line-height: 2em">
+                            <%for(var j=0;j<refelist.length;j++){%>
+                            <tr>
+                               <td>·<%=refelist[j].bookmsg%></td>
+                            </tr>
+                            <%}%>
+                        </table>
                     </li>
                 </ul>
             </div>

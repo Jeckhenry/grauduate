@@ -226,22 +226,96 @@ exports.showClassess = (req,res)=>{
 }
 //向数据库添加教材建设历程信息
 exports.addbookbuild = (req,res)=>{
-
+    resdata1.statusCode  = 4
+    var author_ele = req.body.author,
+        bookname_ele = req.body.bookname,
+        publisher_ele = req.body.publish;
+    bookbuild.create({
+        author:author_ele,
+        bookname:bookname_ele,
+        publisher:publisher_ele
+    },(err)=>{
+        if (err){
+            resdata1.msg = '添加失败'
+            return
+        }
+        resdata1.msg = '添加成功'
+    })
+    res.render('admin/details',{
+        mes:resdata1
+    })
 }
 //向数据库添加教材简介和特色的信息
 exports.addsummary = (req,res)=>{
-
+    resdata1.statusCode = 6
+    var summary_ele = req.body.booksum,
+        pre_ele = req.body.premsg,
+        after_ele = req.body.aftermsg,
+        item_ele = req.body.bookitem;
+    summary.create({
+        summary:summary_ele,
+        pre:pre_ele,
+        after:after_ele,
+        item:item_ele
+    },(err)=>{
+        if (err){
+            resdata1.msg = '添加失败'
+            return
+        }
+        resdata1.msg = '添加成功'
+    })
+    res.render('admin/details',{
+        mes:resdata1
+    })
 }
 //向数据库添加参考书信息
 exports.addrefe = (req,res)=>{
-
+    resdata1.statusCode = 5
+    var bookmsg_e = req.body.bookmsg;
+    reference.create({
+        bookmsg:bookmsg_e
+    },(err)=>{
+        if (err){
+            resdata1.msg = '添加失败'
+            return
+        }
+        resdata1.msg = '添加成功'
+    })
+    res.render('admin/details',{
+        mes:resdata1
+    })
 }
-exports.message3 = (req,res)=>{
-    booksmsg = {
-
-    }
-    next()
+exports.showbuild = (req,res)=>{
+    bookbuild.find({}).then((result)=>{
+        res.render('main/build',{
+            builds:result
+        })
+    })
+}
+exports.showsummary = (req,res)=>{
+    summary.find({}).then((result)=>{
+        res.render('main/summary',{
+            summ:result
+        })
+    })
+}
+exports.showreferen = (req,res)=>{
+    reference.find({}).then((result)=>{
+        res.render('main/reference',{
+            refe:result
+        })
+    })
 }
 exports.showBook = (req,res)=>{
-    res.render('index/books')
+    bookbuild.find({}).then((result1)=>{
+        summary.find({}).then((result2)=>{
+            reference.find({}).then((result3)=>{
+                res.render('index/books',{
+                    refelist:result3,
+                    booklist:result1,
+                    sumlist:result2,
+                })
+            })
+        })
+    })
 }
