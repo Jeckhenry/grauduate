@@ -53,6 +53,12 @@
 	max-width: 20%;
 	width: auto;
 }
+.bot{
+	line-height: 0.6em;
+}
+.bot p{
+	font-size: 0.6em;
+}
 
 
 

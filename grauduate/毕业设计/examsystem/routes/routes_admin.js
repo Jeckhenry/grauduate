@@ -5,6 +5,9 @@ const user = require('../model/user')
 const test = require('../model/test')
 const sites = require('../model/site')
 const teachers = require('../model/teacher')
+const bookbuild = require('../model/bookbuild')
+const reference = require('../model/reference')
+const summary = require('../model/summary')
 const formidable = require('formidable')
 const classes = require('../model/class')
 const fs = require('fs')
@@ -139,7 +142,6 @@ exports.addTeacher = (req,res)=>{
             var oldpath = files.file.path
             var newpath = "./public/img/"+files.file.name
             img_path = files.file.name
-            console.log(img_path)
             if(!files.file.type.includes('image')){
                 resdata1.msg = '请上传图片类型'
                 res.render('admin/details',{
@@ -221,4 +223,25 @@ exports.showClassess = (req,res)=>{
             classmsg:result
         })
     })
+}
+//向数据库添加教材建设历程信息
+exports.addbookbuild = (req,res)=>{
+
+}
+//向数据库添加教材简介和特色的信息
+exports.addsummary = (req,res)=>{
+
+}
+//向数据库添加参考书信息
+exports.addrefe = (req,res)=>{
+
+}
+exports.message3 = (req,res)=>{
+    booksmsg = {
+
+    }
+    next()
+}
+exports.showBook = (req,res)=>{
+    res.render('index/books')
 }

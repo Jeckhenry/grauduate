@@ -160,7 +160,7 @@
         <div>
             <br>
             <h3>添加课程模块：</h3>
-            <h5 style="color: red;" class="text-center">友情提示：课程模块只提交一次，之后的修改请进入具体页面进行！！否则无法生效！</h5>
+            <h5 style="color: red;" class="text-center">友情提示：修改请进入具体页面进行！！否则无法生效！</h5>
             <form action="/admin/addclass" method="post" class="form-horizontal center">
                 <div class="form-group">
                     <label for="classmsg" class="col-md-2 control-label">课程简介：</label>
@@ -184,6 +184,93 @@
                     <button class="btn btn-primary" type="submit">确认添加</button>
                 </div>
                 <%if(mes.statusCode===3){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--教材建设历程-->
+        <div>
+            <br>
+            <h3>添加教材建设模块：</h3>
+            <form action="/admin/addbuild" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="author" class="col-md-2 control-label">作者：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="author" class="form-control" placeholder="请输入作者姓名" name="author">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bookname" class="col-md-2 control-label">教材名称：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="bookname" class="form-control" placeholder="请输入教材名称" name="bookname">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="publish" class="col-md-2 control-label">出版社：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="publish" class="form-control" placeholder="请输入出版社名称" name="publish">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===4){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--参考书信息-->
+        <div>
+            <br>
+            <h3>添加参考书信息模块：</h3>
+            <form action="/admin/addreferen" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="bookmsg" class="col-md-2 control-label">图书信息：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="bookmsg" class="form-control" placeholder="请输入图书信息" name="bookmsg">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===5){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--教材简介信息-->
+        <div>
+            <br>
+            <h3>添加教材简介信息模块：</h3>
+            <form action="/admin/addsummary" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="booksum" class="col-md-2 control-label">教材简介：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="booksum" class="form-control" placeholder="请输入教材简介信息" name="booksum">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="premsg" class="col-md-2 control-label">教材前言：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="premsg" class="form-control" placeholder="请输入教材前言" name="premsg">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="aftermsg" class="col-md-2 control-label">教材后记：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="aftermsg" class="form-control" placeholder="请输入教材后记" name="aftermsg">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bookitem" class="col-md-2 control-label">教材特色：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="bookitem" class="form-control" placeholder="请输入教材特色" name="bookitem">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===6){%>
                 <p class="msg"><%=mes.msg%></p>
                 <%}%>
             </form>

@@ -8,40 +8,36 @@
     <link rel="stylesheet" href="/css/index/internet.css" />
     <link rel="stylesheet" href="/css/index/teacher.css">
     <link rel="stylesheet" href="/css/pageys.css">
-    <title>C语言精品课程--课程介绍</title>
+    <title>C语言精品课程--教材建设</title>
     <style>
-        #content li{
-            position: relative;
-            height:300px;
+        .arti{
+            list-style: none;
+        }
+        .arti li{
+            height:400px;
             overflow-y: scroll;
-        }
-        .li_img{
-            position: absolute;
-            right: 20px;
-            top:0;
-            border:1px solid black;
-        }
-        .tab{
-            width:95%;
-            margin:0 auto;
-            border:1px solid black;
-        }
-        .tab tr td{
-            border:1px solid black;
-        }
-        .tab tr td:nth-of-type(1){
-            width:20%;
-            font-size: 1.3em;
-            text-align: center;
-            font-weight:700;
-            line-height: 2em;
-        }
-        #page_navigation{
-            z-index: 123;
+            margin-top: 2%;
         }
         .msg{
-            text-indent: 2em;
+            list-style: none;
+        }
+        .msg li{
+            margin-left: 10%;
+        }
+        .hov a:hover{
+            color: red;
+        }
+        h3{
+            text-align: center;
+            font-weight: 600;
+        }
+        .borde{
+            border-right:1px solid lightgrey;
+            height:400px;
             line-height: 2em;
+        }
+        .table tr:nth-of-type(1){
+            text-align: center;
         }
     </style>
 </head>
@@ -80,7 +76,7 @@
                                 <a href="/admin/teachers">教师队伍</a>
                             </li>
                             <li>
-                                <a href="/admin/book">教材建设</a>
+                                <a href="">教材建设</a>
                             </li>
                         </ul>
                     </li>
@@ -151,35 +147,54 @@
     </div>
     <div class="row martop" style="background: white;">
         <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
-            <div class="text-left">
-                课程介绍：
-            </div>
-            <div id="message">
-                <input type='hidden' id='current_page' />
-                <input type='hidden' id='show_per_page' />
-                <ul id="content">
-                    <li>
-                        <h3 class="text-center">《C语言程序设计》课程简介</h3>
-                        <div class="msg">
-                            <%=classmsg[0].classmsg%>
-                        </div>
+           <div class="col-lg-2 borde">
+               <ul>
+                   <li class="hov">
+                       <a href="javascript:hit('.contrucing')">教材建设历程</a>
+                   </li>
+                   <li>
+                       <ul class="msg"><a>教材简介</a>
+                       <li class="hov"><a href="javascript:hit('.artimsg')">内容简介</a></li>
+                           <li class="hov"><a href="javascript:hit('.bookpre')">教材前言</a></li>
+                           <li class="hov"><a href="javascript:hit('.bookafter')">教材后记</a></li>
+                       </ul>
+                   </li>
+                   <li class="hov">
+                       <a href="javascript:hit('.bookcolor')">教材特色</a>
+                   </li>
+                   <li class="hov"><a href="javascript:hit('.reader')">教材与参考书</a></li>
+               </ul>
+           </div>
+            <div class="col-lg-10">
+                <ul class="arti">
+                    <li class="contrucing">
+                        <h3>教材建设历程</h3>
+                    <table class="table table-bordered">
+                        <tr>
+                        <td>作者</td>
+                        <td>教材名称</td>
+                        <td>出版社</td>
+                        </tr>
+                    </table>
                     </li>
-                    <li>
-                        <h3 class="text-center">《C语言程序设计》课程特色</h3>
-                        <div class="msg">
-                            <%=classmsg[0].feater%>
-                        </div>
+                    <li class="artimsg">
+                        <h3>内容简介</h3>
+
                     </li>
-                    <li>
-                        <h3 class="text-center">《C语言程序设计》课程理念</h3>
-                        <div class="msg">
-                            <%=classmsg[0].teaching%>
-                        </div>
+                    <li class="bookpre">
+                        <h3>教材前言</h3>
+                    </li>
+                    <li class="bookafter">
+                        <h3>教材后记</h3>
+                    </li>
+                    <li class="bookcolor">
+                        <h3> 教材特色</h3>
+                    </li>
+                    <li class="reader">
+                        <h3> 教材与参考书</h3>
                     </li>
                 </ul>
-                <div id='page_navigation'></div>
             </div>
-
         </div>
     </div>
 
@@ -189,5 +204,15 @@
 <script type="text/javascript" src="/js/angular_1.5.8.min.js" ></script>
 <script type="text/javascript" src="/js/index/internet.js" ></script>
 <script type="text/javascript" src="/js/index/teacherpage.js"></script>
+<script>
+    function hit(li_ele){
+        $('.arti li').hide();
+        $(li_ele).show()
+    }
+    $(function () {
+        $('.arti li').not(':first').hide();
+
+    })
+</script>
 </body>
 </html>

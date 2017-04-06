@@ -47,8 +47,8 @@
 }
 #message{
 	width: 95%;
+	height: 400px;
 	margin: 0 auto;
-	height:370px;
 	margin-top: 2%;
 	position: relative;
 }

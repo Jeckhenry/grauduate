@@ -3,7 +3,7 @@
  */
 $(function(){
     $('.abs').each(function () {
-        $(this).text($(this).text().substring(0,8)+'.....')
+        $(this).text($(this).text().substring(0,6)+'.....')
     })
     $('.del').click(function(){
         $('#middle').val($(this).parent().parent().find('td:first').text())

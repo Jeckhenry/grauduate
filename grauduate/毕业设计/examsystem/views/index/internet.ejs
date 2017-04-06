@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="/css/index/reset.css" />
 		<link rel="stylesheet" href="/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="/css/index/internet.css" />
-		<link rel="stylesheet" href="/css/pageys.css">
+		<link rel="stylesheet" href="/css/pages.css">
 		<title>C语言精品课程--相关网站</title>
 	</head>
 	<body class="bodyback">
@@ -38,10 +38,10 @@
 								</a>
 								<ul class="dropdown-menu">
 									<li>
-										<a href="">课程介绍</a>
+										<a href="/admin/classes">课程介绍</a>
 									</li>
 									<li>
-										<a href="">教师队伍</a>
+										<a href="/admin/teachers">教师队伍</a>
 									</li>
 									<li>
 										<a href="">教材建设</a>
@@ -119,8 +119,6 @@
 						相关网站：
 					</div>
 					<div id="message">
-						<input type='hidden' id='current_page' />
-						<input type='hidden' id='show_per_page' />
 						<ul id="content">
 							<%for(var i=0;i<sites.length;i++){%>
 							<li class="row">
@@ -133,7 +131,6 @@
 							</li>
 							<%}%>
 						</ul>
-						<div id='page_navigation'></div>
 					</div>
 					
 				</div>
@@ -144,6 +141,15 @@
 		<script type="text/javascript" src="/js/bootstrap.min.js" ></script>
 		<script type="text/javascript" src="/js/angular_1.5.8.min.js" ></script>
 		<script type="text/javascript" src="/js/index/internet.js" ></script>
-		<script type="text/javascript" src="/js/pagesystem.js"></script>
+		<script type="text/javascript" src="/js/jquery.kkPages.js"></script>
+		<script>
+			$(function(){
+			    $('#message').kkPages({
+                    PagesClass:'li', //需要分页的元素
+                    PagesMth:15, //每页显示个数
+                    PagesNavMth:5 //显示导航个数
+				})
+			})
+		</script>
 	</body>
 </html>
