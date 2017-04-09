@@ -8,40 +8,45 @@
     <link rel="stylesheet" href="/css/index/internet.css" />
     <link rel="stylesheet" href="/css/index/teacher.css">
     <link rel="stylesheet" href="/css/pageys.css">
-    <title>C语言精品课程--课程介绍</title>
+    <title>C语言精品课程--教学管理</title>
     <style>
         #content li{
             position: relative;
             height:300px;
             overflow-y: scroll;
         }
-        .li_img{
-            position: absolute;
-            right: 20px;
-            top:0;
-            border:1px solid black;
+        .arti{
+            list-style: none;
         }
-        .tab{
-            width:95%;
-            margin:0 auto;
-            border:1px solid black;
+        .arti li{
+            height:400px;
+            overflow-y: scroll;
+            margin-top: 2%;
         }
-        .tab tr td{
-            border:1px solid black;
+        .hov{
+            margin-left:6%;
+            margin-top:5%;
         }
-        .tab tr td:nth-of-type(1){
-            width:20%;
-            font-size: 1.3em;
+        .hov a:hover{
+            color: red;
+        }
+        h3{
             text-align: center;
-            font-weight:700;
+            font-weight: 600;
+        }
+        .borde{
+            border-right:1px solid lightgrey;
             line-height: 2em;
         }
-        #page_navigation{
-            z-index: 123;
+        .table tr:nth-of-type(1){
+            text-align: center;
         }
-        .msg{
+        .table tr:nth-of-type(1) td{
+            background-color: #ffa711;
+        }
+        .textar{
+            line-height: 2em;
             text-indent: 2em;
-            line-height: 2em;
         }
     </style>
 </head>
@@ -72,35 +77,18 @@
     </div>
     <div class="row martop" style="background: white;">
         <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
-            <div class="text-left">
-                课程介绍：
-            </div>
-            <div id="message">
-                <input type='hidden' id='current_page' />
-                <input type='hidden' id='show_per_page' />
-                <ul id="content">
-                    <li>
-                        <h3 class="text-center">《C语言程序设计》课程简介</h3>
-                        <div class="msg">
-                            <%=classmsg[0].classmsg%>
-                        </div>
-                    </li>
-                    <li>
-                        <h3 class="text-center">《C语言程序设计》课程特色</h3>
-                        <div class="msg">
-                            <%=classmsg[0].feater%>
-                        </div>
-                    </li>
-                    <li>
-                        <h3 class="text-center">《C语言程序设计》课程理念</h3>
-                        <div class="msg">
-                            <%=classmsg[0].teaching%>
-                        </div>
-                    </li>
-                </ul>
-                <div id='page_navigation'></div>
-            </div>
+            <div class="col-lg-2 borde col-md-2 col-sm-2 col-xs-2">
+                <ul>
 
+                </ul>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <ul class="arti">
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
         </div>
     </div>
 
@@ -110,5 +98,15 @@
 <script type="text/javascript" src="/js/angular_1.5.8.min.js" ></script>
 <script type="text/javascript" src="/js/index/internet.js" ></script>
 <script type="text/javascript" src="/js/index/teacherpage.js"></script>
+<script>
+    function hit(li_ele){
+        $('ul.arti>li').hide();
+        $(li_ele).show()
+    }
+    $(function () {
+        $('.arti>li').not(':first').hide();
+
+    })
+</script>
 </body>
 </html>

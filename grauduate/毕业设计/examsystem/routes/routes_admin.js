@@ -319,3 +319,43 @@ exports.showBook = (req,res)=>{
         })
     })
 }
+//课堂教学
+exports.showclassteach = (req,res)=>{
+    res.render('index/classteach')
+}
+//双语教学
+exports.showdouble = (req,res)=>{
+    res.render('index/doublelan')
+}
+//实验教学
+exports.showtestteach = (req,res)=>{
+    res.render('index/testteach')
+}
+//网络教学
+exports.showinterTeach = (req,res)=>{
+    res.render('index/interteach')
+}
+//成果展示
+exports.showachieve = (req,res)=>{
+    res.render('index/achieve')
+}
+//教学改革
+exports.showteachingreform = (req,res)=>{
+    res.render('index/teachingreform')
+}
+//考试改革
+exports.showtestreform = (req,res)=>{
+    res.render('index/testreform')
+}
+//教学效果
+exports.showteachresult  = (req,res)=>{
+    res.render('index/teachresult')
+}
+//教学管理
+exports.showteachcon = (req,res)=>{
+    res.render('index/teachcontrolle')
+}
+//教学录像
+exports.showteachmove = (req,res)=>{
+    res.render('index/teachmove')
+}
