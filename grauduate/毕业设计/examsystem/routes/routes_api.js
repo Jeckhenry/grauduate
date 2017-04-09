@@ -9,6 +9,11 @@ const classes = require('../model/class')
 const build = require('../model/bookbuild')
 const summary = require('../model/summary')
 const reference = require('../model/reference')
+const teaching = require('../model/teaching')//教学理念和注意点
+const teacinghome = require('../model/teachinghomework')//作业习题
+const cal = require('../model/teacingcal')//教学日历
+const teachingcourse = require('../model/teacingcourseware')//教学课件
+const important = require('../model/importsthings')//重点和难点
 var resdata;
 exports.initData = (req,res,next)=>{
     resdata = {
@@ -282,6 +287,89 @@ exports.changesum = (req,res)=>{
     var oldValue = {_id:req.body.middle}
     var newValue = {$set:{summary:classmsg,pre:classfea,after:classteac,item:item_ele}}
     summary.update(oldValue,newValue,function(err,result){
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+exports.changeteachmsg = (req,res)=>{
+    var classmsg = req.body.$_1,
+        classfea = req.body.$_2;
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{idea:classmsg,points:classfea}}
+    teaching.update(oldValue,newValue,function(err,result){
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+exports.delcal = (req,res)=>{
+    var contion = req.body.middle;
+    cal.remove({_id:contion},(err,req)=>{
+        if (err){
+            return
+        }
+    })
+}
+exports.changecal = (req,res)=>{
+    var can1 = req.body.weeks,
+        can2 = req.body.teacing,
+        can3 = req.body.article,
+        can4 = req.body.method,
+        can5 = req.body.example,
+        can6 = req.body.exercise;
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{ weeks:can1,
+        teacing:can2,
+        article:can3,
+        methods:can4,
+        example:can5,
+        exercise:can6}};
+    cal.update(oldValue,newValue,function(err){
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+exports.delcourse = (req,res)=>{
+    var contion = req.body.middle;
+    teachingcourse.remove({_id:contion},(err,req)=>{
+        if (err){
+            return
+        }
+    })
+}
+exports.delexercise = (req,res)=>{
+    var contion = req.body.middle;
+    teacinghome.remove({_id:contion},(err,req)=>{
+        if (err){
+            return
+        }
+    })
+}
+exports.delimportants = (req,res)=>{
+    var contion = req.body.middle;
+    teacinghome.remove({_id:contion},(err,req)=>{
+        if (err){
+            return
+        }
+    })
+}
+exports.changeimportants = (req,res)=>{
+    var can1 = req.body.auhtname,
+        can2 = req.body.clfea,
+        can3 = req.body.clf;
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{chater:can1,
+        imports:can2,
+        difficulty:can3}};
+    important.update(oldValue,newValue,function(err){
         if (err){
             console.log(err)
             return

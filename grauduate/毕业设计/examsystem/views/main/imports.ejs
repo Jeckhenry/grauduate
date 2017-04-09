@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+        *{
+            font-family: "宋体";
+            margin:0;
+            padding:0;
+            font-size: 20px;
+        }
+        tr{
+            width:100%;
+        }
+        td{
+            width:11%;
+        }
+        .character{
+            text-align: left;
+            font-size:2em;
+            margin-top: 2%;
+        }
+    </style>
+    <title>重难点</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 sdf">
+            <img src="/img/top1_r1_c1.gif" alt="..">
+        </div>
+        <div class="col-lg-6 visible-lg character">
+            重难点库
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <input type="text" name="middle" id="middle" style="display: none">
+        <div id="waring"></div>
+        <input type="text" id="middle" style="display: none" name="middle">
+        <table class="table table-bordered table-responsive model">
+            <thead>
+            <th class="text-center">ID</th>
+            <th class="text-center">章节</th>
+            <th class="text-center">重点</th>
+            <th class="text-center">难点</th>
+            <th class="text-center">操作</th>
+            </thead>
+            <tbody>
+            <%for(var i=0;i<teacmsg.length;i++){%>
+            <tr>
+                <td><%=teacmsg[i]._id%></td>
+                <td class="ar" name="clmsg"><%=teacmsg[i].chater%></td>
+                <td class="ar" name="clfea"><%=teacmsg[i].imports%></td>
+                <td class="ar" name="clf"><%=teacmsg[i].difficulty%></td>
+                <td  class="text-center">
+                    <input type="button" class="del btn" value="删除"></input>
+                    <input type="button" class="cha btn" value="修改"></input>
+                </td>
+            </tr>
+            <%}%>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/angular_1.5.8.min.js"></script>
+<script src="/js/test/important.js"></script>
+</body>
+</html>

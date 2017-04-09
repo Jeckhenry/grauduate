@@ -31,6 +31,12 @@
             <li role="presentation"><a href="/admin/build" target="_blank">教材建设信息库</a></li>
             <li role="presentation"><a href="/admin/summary" target="_blank">教材简介信息库</a></li>
             <li role="presentation"><a href="/admin/refe" target="_blank">参考教材信息库</a></li>
+            <li role="presentation"><a href="/admin/teachmsg" target="_blank">教学信息库</a></li>
+            <li role="presentation"><a href="/admin/calendermsg" target="_blank">教学日历库</a></li>
+            <li role="presentation"><a href="/admin/coursemsg" target="_blank">教学课件库</a></li>
+            <li role="presentation"><a href="/admin/exercisemsg" target="_blank">作业习题库</a></li>
+            <li role="presentation"><a href="/admin/important" target="_blank">章节中重难点库</a></li>
+
         </ul>
         <div>
         <h3>添加题目模块：</h3>
@@ -275,6 +281,156 @@
                     <button class="btn btn-primary" type="submit">确认添加</button>
                 </div>
                 <%if(mes.statusCode===6){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--教学理念和讲授的注意点-->
+        <div>
+            <br>
+            <h3>添加教学理念和讲授的注意点：</h3>
+            <!--此段代码后期可以删除-->
+            <form action="/admin/addteaching" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="teachidea" class="col-md-3 control-label">教学理念：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachidea" class="form-control" placeholder="请输入教学理念" name="teachidea">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachpoints" class="col-md-3 control-label">讲授注意点：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachpoints" class="form-control" placeholder="请输入讲授注意点" name="teachpoints">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===7){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--教学日历-->
+        <div>
+            <br>
+            <h3>添加教学日历：</h3>
+            <form action="/admin/addcal" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="teachweeks" class="col-md-3 control-label">授课周序：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachweeks" class="form-control" placeholder="请输入授课周序" name="teachweeks">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teaching" class="col-md-3 control-label">教学进程：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teaching" class="form-control" placeholder="请输入教学进程" name="teaching">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teacharticle" class="col-md-3 control-label">授课内容：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teacharticle" class="form-control" placeholder="请输入授课内容" name="teacharticle">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachmethod" class="col-md-3 control-label">授课方式：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachmethod" class="form-control" placeholder="请输入授课方式" name="teachmethod">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachexample" class="col-md-3 control-label">例题：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachexample" class="form-control" placeholder="请输入例题" name="teachexample">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachexercise" class="col-md-3 control-label">习题：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachexercise" class="form-control" placeholder="请输入习题" name="teachexercise">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===8){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--重点难点-->
+        <div>
+            <br>
+            <h3>添加教学重难点：</h3>
+            <form action="/admin/addimportant" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="charter" class="col-md-3 control-label">章：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="charter" class="form-control" placeholder="请输入章节" name="charter">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="imports" class="col-md-3 control-label">重点：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="imports" class="form-control" placeholder="请输入重点" name="imports">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="difficulty" class="col-md-3 control-label">难点：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="difficulty" class="form-control" placeholder="请输入难点" name="difficulty">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===9){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--课件上传-->
+        <div>
+            <br>
+            <h3>添加教学课件：</h3>
+            <form action="/admin/addteachcourse" method="post" enctype="multipart/form-data" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="teachcourse" class="col-md-5 control-label">上传课件（以教师名命名）：</label>
+                    <div class="col-md-4">
+                        <input type="file" id="teachcourse" class="form-control" name="teachcourse">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:10px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===10){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--习题上传-->
+        <div>
+            <br>
+            <h3>上传习题及其答案：</h3>
+            <form action="/admin/addteachexer" method="post" enctype="multipart/form-data" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="teachexer" class="col-md-5 control-label">上传习题（doc）：</label>
+                    <div class="col-md-4">
+                        <input type="file" id="teachexer" class="form-control" name="teachexer">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachexerans" class="col-md-5 control-label">上传习题答案（doc）：</label>
+                    <div class="col-md-4">
+                        <input type="file" id="teachexerans" class="form-control" name="teachexerans">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:10px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===11){%>
                 <p class="msg"><%=mes.msg%></p>
                 <%}%>
             </form>

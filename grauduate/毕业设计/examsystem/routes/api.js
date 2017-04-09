@@ -28,4 +28,12 @@ router.post('/changebuild',route.changebuild)
 router.post('/changerefe',route.changerefe)
 router.post('/delrefe',route.delrefe)
 router.post('/changesum',route.changesum)
+router.post('/changeteachmsg',route.changeteachmsg)
+router.post('/delcal',route.delcal)
+router.post('/changecal',route.changecal)
+router.post('/delcourse',route.delcourse)
+router.post('/changimportant',route.changeimportants)
+router.post('/delexercise',route.delexercise)
+router.post('/delimportant',route.delimportants)
+
 module.exports = router
