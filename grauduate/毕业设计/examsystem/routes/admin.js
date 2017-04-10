@@ -52,5 +52,4 @@ router.post('/addteachcourse',route.addteachcourse)
 router.post('/addteaching',route.addteacing)
 router.post('/addteachexer',route.addteachinghome)
 router.post('/addimportant',route.addimports)
-router.post('/downloadexercise',route.downloadexercise)
 module.exports = router

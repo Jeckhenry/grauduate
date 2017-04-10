@@ -16,8 +16,8 @@ const teacinghome = require('../model/teachinghomework')//作业习题
 const cal = require('../model/teacingcal')//教学日历
 const teachingcourse = require('../model/teacingcourseware')//教学课件
 const important = require('../model/importsthings')//重点和难点
-const async = require('async')
-const step = require('step')
+var url = require('url');
+var http = require('http');
 //此页面添加网站后台其他部分的路由
 exports.showAdmin = (req,res)=>{
         user.find({}).then((result)=>{
@@ -543,17 +543,8 @@ exports.showimportsmsg = (req,res)=>{
         })
     })
 }
-//习题及答案的下载
-exports.downloadexercise = (req,res)=>{
-    var path = './public/teachcourse/'+req.body.smallpath;
-    res.download(path,'l',function (err) {
-        if (err){
-            console.log(err)
-        }else{
-            console.log('出现')
-        }
-    })
-}
+
+
 //双语教学
 exports.showdouble = (req,res)=>{
     res.render('index/doublelan')

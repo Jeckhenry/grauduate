@@ -8,6 +8,7 @@ const user = require('./model/user')
 const app = express()
 
 app.use(express.static(__dirname+'/public'))
+app.use(express.static(__dirname+'/teachcourse'))
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({extend:true}))
 app.set('view engine','ejs')
