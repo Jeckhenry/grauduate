@@ -35,5 +35,6 @@ router.post('/delcourse',route.delcourse)
 router.post('/changimportant',route.changeimportants)
 router.post('/delexercise',route.delexercise)
 router.post('/delimportant',route.delimportants)
-
+router.post('/changeteachref',route.changeteachres)
+router.post('/changetestref',route.changetestref)
 module.exports = router

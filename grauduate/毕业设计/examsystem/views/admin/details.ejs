@@ -36,7 +36,8 @@
             <li role="presentation"><a href="/admin/coursemsg" target="_blank">教学课件库</a></li>
             <li role="presentation"><a href="/admin/exercisemsg" target="_blank">作业习题库</a></li>
             <li role="presentation"><a href="/admin/important" target="_blank">章节中重难点库</a></li>
-
+            <li role="presentation"><a href="/admin/teachreforms" target="_blank">教学改革库</a></li>
+            <li role="presentation"><a href="/admin/testref" target="_blank">考试改革库</a></li>
         </ul>
         <div>
         <h3>添加题目模块：</h3>
@@ -431,6 +432,93 @@
                     <button class="btn btn-primary" type="submit">确认添加</button>
                 </div>
                 <%if(mes.statusCode===11){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--教学改革-->
+        <div>
+            <br>
+            <h3>教学改革方案：</h3>
+            <form action="/admin/addteachreform" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="methodref" class="col-md-3 control-label">教学方法改革：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="methodref" class="form-control" placeholder="请输入教学方法改革" name="methodref">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="testref" class="col-md-3 control-label">考试方法改革：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="testref" class="form-control" placeholder="请输入考试方法改革" name="testref">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="conref" class="col-md-3 control-label">教学管理改革：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="conref" class="form-control" placeholder="请输入教学管理改革" name="conref">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:10px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===12){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--考试改革-->
+        <div>
+            <br>
+            <h3>添加考试改革内容：</h3>
+            <!--此段代码后期可以删除-->
+            <form action="/admin/addtestref" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="testarti" class="col-md-3 control-label">考核内容：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="testarti" class="form-control" placeholder="请输入考核内容" name="testarti">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="testmethod" class="col-md-3 control-label">考核方法：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="testmethod" class="form-control" placeholder="请输入考核方法" name="testmethod">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="gradesave" class="col-md-3 control-label">成绩记载方法：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="gradesave" class="form-control" placeholder="请输入成绩记载方法" name="gradesave">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="testingmethod" class="col-md-3 control-label">考试命题方法：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="testingmethod" class="form-control" placeholder="请输入考试命题方法" name="testingmethod">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="testchacr" class="col-md-3 control-label">考核方式的特色：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="testchacr" class="form-control" placeholder="请输入考核方式的特色" name="testchacr">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="testrefplan" class="col-md-3 control-label">改革计划：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="testrefplan" class="form-control" placeholder="请输入改革计划" name="testrefplan">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="testadvan" class="col-md-3 control-label">网上考试自动评分系统的特点和优势：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="testadvan" class="form-control" placeholder="请输入网上考试自动评分系统的特点和优势" name="testadvan">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===13){%>
                 <p class="msg"><%=mes.msg%></p>
                 <%}%>
             </form>

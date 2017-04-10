@@ -14,6 +14,8 @@ const teacinghome = require('../model/teachinghomework')//作业习题
 const cal = require('../model/teacingcal')//教学日历
 const teachingcourse = require('../model/teacingcourseware')//教学课件
 const important = require('../model/importsthings')//重点和难点
+const teachref = require('../model/teachreform')
+const testref = require('../model/testref')
 var resdata;
 exports.initData = (req,res,next)=>{
     resdata = {
@@ -370,6 +372,39 @@ exports.changeimportants = (req,res)=>{
         imports:can2,
         difficulty:can3}};
     important.update(oldValue,newValue,function(err){
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+exports.changeteachres = (req,res)=>{
+    var can1 = req.body.classmsg,
+        can2 = req.body.feater,
+        can3 = req.body.teaching;
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{teachmethodmsg:can1,
+        testmethod:can2,
+        conmethod:can3}};
+    teachref.update(oldValue,newValue,function (err) {
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+exports.changetestref = (req,res)=>{
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{testarticle:req.body.testarticle_$,
+        testmethod:req.body.testmethod_$,
+        gradesave:req.body.gradesave_$,
+        testingmethod:req.body.testingmethod_$,
+        testcharac:req.body.testcharac_$,
+        refplan:req.body.refplan_$,
+        testingadvantage:req.body.testingadvantage_$}};
+    testref.update(oldValue,newValue,function (err) {
         if (err){
             console.log(err)
             return

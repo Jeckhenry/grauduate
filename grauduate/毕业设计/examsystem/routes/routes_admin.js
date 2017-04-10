@@ -16,8 +16,8 @@ const teacinghome = require('../model/teachinghomework')//作业习题
 const cal = require('../model/teacingcal')//教学日历
 const teachingcourse = require('../model/teacingcourseware')//教学课件
 const important = require('../model/importsthings')//重点和难点
-var url = require('url');
-var http = require('http');
+const teachreform = require('../model/teachreform')
+const testref = require('../model/testref')
 //此页面添加网站后台其他部分的路由
 exports.showAdmin = (req,res)=>{
         user.find({}).then((result)=>{
@@ -543,8 +543,6 @@ exports.showimportsmsg = (req,res)=>{
         })
     })
 }
-
-
 //双语教学
 exports.showdouble = (req,res)=>{
     res.render('index/doublelan')
@@ -563,12 +561,77 @@ exports.showachieve = (req,res)=>{
 }
 //教学改革
 exports.showteachingreform = (req,res)=>{
-    res.render('index/teachingreform')
+    teachreform.find({}).then((result)=>{
+        res.render('index/teachingreform',{
+            teachref:result
+        })
+    })
+}
+exports.showteachrefs = (req,res)=>{
+    teachreform.find({}).then((result)=>{
+        res.render('main/teachreform',{
+            teachref:result
+        })
+    })
+}
+exports.addteachreform = (req,res)=>{
+    resdata1.statusCode = 12
+    var teach = req.body.methodref,
+        test = req.body.testref,
+        con = req.body.conref;
+    teachreform.create({
+        teachmethodmsg:teach,
+        testmethod:test,
+        conmethod:con
+    },(err)=>{
+        if (err){
+            resdata1.msg = '添加失败'
+            return
+        }
+        resdata1.msg = '添加成功'
+    })
+    res.render('admin/details',{
+        mes:resdata1
+    })
 }
 //考试改革
 exports.showtestreform = (req,res)=>{
-    res.render('index/testreform')
+    testref.find({}).then((result)=>{
+        res.render('index/testreform',{
+            testresult :result
+        })
+    })
 }
+exports.showtestref = (req,res)=>{
+    testref.find({}).then((result)=>{
+        res.render('main/testref',{
+            teacmsg:result
+        })
+    })
+}
+exports.addtestreform = (req,res)=>{
+    resdata1.statusCode = 13
+    testref.create({
+        testarticle:req.body.testarti,
+        testmethod:req.body.testmethod,
+        gradesave:req.body.gradesave,
+        testingmethod:req.body.testingmethod,
+        testcharac:req.body.testchacr,
+        refplan:req.body.testrefplan,
+        testingadvantage:req.body.testadvan
+    },(err)=>{
+        if (err){
+            console.log(err)
+            resdata1.msg = '添加失败'
+            return
+        }
+        resdata1.msg = '添加成功'
+    })
+    res.render('admin/details',{
+        mes:resdata1
+    })
+}
+
 //教学效果
 exports.showteachresult  = (req,res)=>{
     res.render('index/teachresult')
