@@ -83,7 +83,6 @@
                     <li class="hov">
                         <a href="javascript:hit('.contrucing')">在线教学网站的特色</a>
                     </li>
-                    <li class="hov"><a href="javascript:hit('.artimsg')">在线教学网站演示</a></li>
                     <li class="hov"><a href="javascript:hit('.bookpre')">在线教学网站链接</a></li>
                     <li class="hov"><a href="javascript:hit('.bookafter')">教学课件</a></li>
                 </ul>
@@ -92,15 +91,15 @@
                 <ul class="arti">
                     <li class="contrucing">
                         <h3>在线教学网站的特色</h3>
-                        <div class="textar"></div>
-                    </li>
-                    <li class="artimsg">
-                        <h3>在线教学网站演示</h3>
-                        <div class="textar"></div>
+                        <div class="textar">
+                            <%=interteach[0].ingcharac%>
+                        </div>
                     </li>
                     <li class="bookpre">
                         <h3>在线教学网站链接</h3>
-                        <div class="textar"></div>
+                        <div class="textar" style="font-size: 2em;">
+                            <a href="<%=interteach[0].inglink%>"><%=interteach[0].inglink%></a>
+                        </div>
                     </li>
                     <li class="bookafter">
                         <h3>教学课件</h3>
@@ -110,6 +109,13 @@
                                 <td>格式</td>
                                 <td>下载</td>
                             </tr>
+                            <%for(var i=0;i<course.length;i++){%>
+                            <tr>
+                                <td class="text-center"><%=course[i].teacher%></td>
+                                <td class="text-center">ZIP</td>
+                                <td class="text-center"><a class="exercise" href=""><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                            </tr>
+                            <%}%>
                         </table>
                     </li>
                 </ul>
@@ -132,7 +138,10 @@
     }
     $(function () {
         $('.arti li').not(':first').hide();
-
+        $('.exercise').click(function(){
+            var path = "http://127.0.0.1/teachcourse/"+$(this).parent().prev().prev().text()
+            $(this).attr('href',path)
+        })
     })
 </script>
 </body>

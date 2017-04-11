@@ -7,8 +7,27 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/test/details.css">
     <title>Title</title>
+    <style>
+        .daohang li{
+            margin-top: 5px;
+        }
+        .daohang li a{
+            background: #d8fffa;
+        }
+        body{
+            position: relative;
+        }
+        #up{
+            position: fixed;
+            z-index: 1234;
+            width:3%;
+            right:2%;
+            top:550px
+        }
+    </style>
 </head>
 <body>
+<img src="/img/up.png" alt=".." id="up">
 <div class="firstwid">
     <div class="container">
         <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
@@ -19,8 +38,31 @@
             <button id="back" class="btn btn-danger">退出</button>
         </div>
     </div>
+    <div>
+        <b>快捷操作：</b>
+        <ul class="nav nav-pills daohang">
+            <li role="presentation"><a href="#question" >题库</a></li>
+            <li role="presentation"><a href="#intersite">网址库</a></li>
+            <li role="presentation"><a href="#teachmessage">教师信息库</a></li>
+            <li role="presentation"><a href="#classmessage">课程信息库</a></li>
+            <li role="presentation"><a href="#booksmessage">教材建设信息库</a></li>
+            <li role="presentation"><a href="#bookinfor">教材简介信息库</a></li>
+            <li role="presentation"><a href="#refbookmessage">参考教材信息库</a></li>
+            <li role="presentation"><a href="#teachthingsmessage">教学信息库</a></li>
+            <li role="presentation"><a href="#teachcalender">教学日历库</a></li>
+            <li role="presentation"><a href="#courseupload">教学课件库</a></li>
+            <li role="presentation"><a href="#exerciseupload">作业习题库</a></li>
+            <li role="presentation"><a href="#teachdifficulty">章节中重难点库</a></li>
+            <li role="presentation"><a href="#teachreformmessage">教学改革库</a></li>
+            <li role="presentation"><a href="#testrefmessage">考试改革库</a></li>
+            <li role="presentation"><a href="#intertestmessage">网络教学信息库</a></li>
+            <li role="presentation"><a href="#booksimgmessage">书籍图片信息</a></li>
+            <li role="presentation"><a href="#thesismessage">发表的论文信息</a></li>
+        </ul>
+    </div>
     <!--题库操作部分-->
     <div class="container">
+        <b>后台页面：</b>
         <ul class="nav nav-pills">
             <li role="presentation"><a href="/admin/details">操作数据库</a></li>
             <li role="presentation"><a href="/admin/admin" target="_blank">用户列表</a></li>
@@ -38,8 +80,11 @@
             <li role="presentation"><a href="/admin/important" target="_blank">章节中重难点库</a></li>
             <li role="presentation"><a href="/admin/teachreforms" target="_blank">教学改革库</a></li>
             <li role="presentation"><a href="/admin/testref" target="_blank">考试改革库</a></li>
+            <li role="presentation"><a href="/admin/interteachmain" target="_blank">网络教学信息库</a></li>
+            <li role="presentation"><a href="/admin/bookachieve" target="_blank">书籍图片信息</a></li>
+            <li role="presentation"><a href="/admin/thesis" target="_blank">发表的论文信息</a></li>
         </ul>
-        <div>
+        <div id="question">
         <h3>添加题目模块：</h3>
         <form action="/admin/addtest" method="post" class="form-horizontal center">
         <div class="form-group">
@@ -87,7 +132,7 @@
     </form>
         </div>
         <!--设置其他模块的后台操作-->
-        <div>
+        <div id="intersite">
             <br>
         <h3>添加网址模块：</h3>
         <form action="/admin/addsite" method="post" class="form-horizontal center">
@@ -106,7 +151,7 @@
         </form>
         </div>
         <!--教师信息-->
-        <div>
+        <div id="teachmessage">
             <br>
             <h3>添加教师模块：</h3>
             <form action="/admin/addteacher" method="post" enctype="multipart/form-data" class="form-horizontal center">
@@ -167,7 +212,7 @@
             </form>
         </div>
         <!--课程信息模块-->
-        <div>
+        <div id="classmessage">
             <br>
             <h3>添加课程模块：</h3>
             <h5 style="color: red;" class="text-center">友情提示：修改请进入具体页面进行！！否则无法生效！</h5>
@@ -199,7 +244,7 @@
             </form>
         </div>
         <!--教材建设历程-->
-        <div>
+        <div id="booksmessage">
             <br>
             <h3>添加教材建设模块：</h3>
             <form action="/admin/addbuild" method="post" class="form-horizontal center">
@@ -230,7 +275,7 @@
             </form>
         </div>
         <!--参考书信息-->
-        <div>
+        <div id="refbookmessage">
             <br>
             <h3>添加参考书信息模块：</h3>
             <form action="/admin/addreferen" method="post" class="form-horizontal center">
@@ -249,10 +294,11 @@
             </form>
         </div>
         <!--教材简介信息-->
-        <div>
+        <div id="bookinfor">
             <br>
             <h3>添加教材简介信息模块：</h3>
             <!--此段代码后期可以删除-->
+            <h5 style="color: red;" class="text-center">友情提示：修改请进入具体页面进行！！否则无法生效！</h5>
             <form action="/admin/addsummary" method="post" class="form-horizontal center">
                 <div class="form-group">
                     <label for="booksum" class="col-md-2 control-label">教材简介：</label>
@@ -287,10 +333,11 @@
             </form>
         </div>
         <!--教学理念和讲授的注意点-->
-        <div>
+        <div id="teachthingsmessage">
             <br>
             <h3>添加教学理念和讲授的注意点：</h3>
             <!--此段代码后期可以删除-->
+            <h5 style="color: red;" class="text-center">友情提示：修改请进入具体页面进行！！否则无法生效！</h5>
             <form action="/admin/addteaching" method="post" class="form-horizontal center">
                 <div class="form-group">
                     <label for="teachidea" class="col-md-3 control-label">教学理念：</label>
@@ -313,7 +360,7 @@
             </form>
         </div>
         <!--教学日历-->
-        <div>
+        <div id="teachcalender">
             <br>
             <h3>添加教学日历：</h3>
             <form action="/admin/addcal" method="post" class="form-horizontal center">
@@ -362,7 +409,7 @@
             </form>
         </div>
         <!--重点难点-->
-        <div>
+        <div id="teachdifficulty">
             <br>
             <h3>添加教学重难点：</h3>
             <form action="/admin/addimportant" method="post" class="form-horizontal center">
@@ -393,7 +440,7 @@
             </form>
         </div>
         <!--课件上传-->
-        <div>
+        <div id="courseupload">
             <br>
             <h3>添加教学课件：</h3>
             <form action="/admin/addteachcourse" method="post" enctype="multipart/form-data" class="form-horizontal center">
@@ -412,7 +459,7 @@
             </form>
         </div>
         <!--习题上传-->
-        <div>
+        <div id="exerciseupload">
             <br>
             <h3>上传习题及其答案：</h3>
             <form action="/admin/addteachexer" method="post" enctype="multipart/form-data" class="form-horizontal center">
@@ -437,9 +484,11 @@
             </form>
         </div>
         <!--教学改革-->
-        <div>
+        <div id="teachreformmessage">
             <br>
             <h3>教学改革方案：</h3>
+            <h5 style="color: red;" class="text-center">友情提示：修改请进入具体页面进行！！否则无法生效！</h5>
+
             <form action="/admin/addteachreform" method="post" class="form-horizontal center">
                 <div class="form-group">
                     <label for="methodref" class="col-md-3 control-label">教学方法改革：</label>
@@ -468,10 +517,12 @@
             </form>
         </div>
         <!--考试改革-->
-        <div>
+        <div id="testrefmessage">
             <br>
             <h3>添加考试改革内容：</h3>
             <!--此段代码后期可以删除-->
+            <h5 style="color: red;" class="text-center">友情提示：修改请进入具体页面进行！！否则无法生效！</h5>
+
             <form action="/admin/addtestref" method="post" class="form-horizontal center">
                 <div class="form-group">
                     <label for="testarti" class="col-md-3 control-label">考核内容：</label>
@@ -519,6 +570,90 @@
                     <button class="btn btn-primary" type="submit">确认添加</button>
                 </div>
                 <%if(mes.statusCode===13){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--网络教学-->
+        <div id="intertestmessage">
+            <br>
+            <h3>添加网络教学内容：</h3>
+            <!--此段代码后期可以删除-->
+            <h5 style="color: red;" class="text-center">友情提示：修改请进入具体页面进行！！否则无法生效！</h5>
+
+            <form action="/admin/addinterteach" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="ingcharacter" class="col-md-3 control-label">在线教学网站特色：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="ingcharacter" class="form-control" placeholder="请输入在线教学网站特色" name="ingcharacter">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inglink" class="col-md-3 control-label">在线教学网站链接：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="inglink" class="form-control" placeholder="请输入在线教学网站链接" name="inglink">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===14){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--添加教材建设成果图片-->
+        <div id="booksimgmessage">
+            <br>
+            <h3>添加教材建设成果图片：</h3>
+            <form action="/admin/addachieveimg" method="post" enctype="multipart/form-data" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="bookimg" class="col-md-5 control-label">添加图片(可以上传多个)：</label>
+                    <div class="col-md-4">
+                        <input type="file" id="bookimg" class="form-control" name="bookimg">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===15){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--添加论文-->
+        <div id="thesismessage">
+            <br>
+            <h3>添加论文：</h3>
+            <form action="/admin/addthesis" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="thesisauthor" class="col-md-5 control-label">作者：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="thesisauthor" class="form-control" name="thesisauthor">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="thesistitle" class="col-md-5 control-label">题目：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="thesistitle" class="form-control" name="thesistitle">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="thesismage" class="col-md-5 control-label">杂志名称：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="thesismage" class="form-control" name="thesismage">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="thesisdate" class="col-md-5 control-label">日期：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="thesisdate" class="form-control" name="thesisdate">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===16){%>
                 <p class="msg"><%=mes.msg%></p>
                 <%}%>
             </form>

@@ -44,6 +44,15 @@
         .table tr:nth-of-type(1) td{
             background-color: #ffa711;
         }
+        .books{
+            width:45%;
+            float: left;
+            border:0;
+        }
+        .books img{
+            height:200px;
+            width:100%;
+        }
         .textar{
             line-height: 2em;
             text-indent: 2em;
@@ -92,9 +101,9 @@
                 <ul class="arti">
                     <li class="contrucing">
                         <h3>教材建设成果</h3>
-                        <ul>
-
-                        </ul>
+                            <%for(var i=0;i<achieveimg.length;i++){%>
+                            <div class="books"><img src="/img/<%=achieveimg[i].bookname%>" alt=".."></div>
+                            <%}%>
                     </li>
                     <li class="artimsg">
                         <h3>发表论文</h3>
@@ -111,7 +120,6 @@
                         <h3>教学成果奖及证书</h3>
                         <table class="table table-bordered">
                             <tr>
-                                <td>编号</td>
                                 <td>内容</td>
                                 <td>奖项</td>
                                 <td>日期</td>
@@ -119,32 +127,14 @@
                         </table>
                     </li>
                     <li class="bookafter">
-                        <h3>作业习题</h3>
+                        <h3>培养硕士生</h3>
+                        <h4 class="text-center">毕业论文</h4>
                         <table class="table table-bordered">
                             <tr>
-                                <td>内容</td>
-                                <td>格式</td>
-                                <td>下载</td>
+                                <td>作者</td>
+                                <td>论文题目</td>
                             </tr>
                         </table>
-                    </li>
-                    <li class="bookcolor">
-                        <h3>试卷</h3>
-                        <table class="table table-bordered">
-                            <tr>
-                                <td>内容</td>
-                                <td>格式</td>
-                                <td>下载</td>
-                            </tr>
-                        </table>
-                    </li>
-                    <li class="reader">
-                        <h3>参考文献</h3>
-                        <div class="textar">
-                            <ul>
-
-                            </ul>
-                        </div>
                     </li>
                 </ul>
             </div>

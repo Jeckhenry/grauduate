@@ -37,4 +37,8 @@ router.post('/delexercise',route.delexercise)
 router.post('/delimportant',route.delimportants)
 router.post('/changeteachref',route.changeteachres)
 router.post('/changetestref',route.changetestref)
+router.post('/changeinterteach',route.changeinterteach)
+router.post('/delbookachieve',route.delbookachieve)
+router.post('/delthesis',route.delthesis)
+router.post('/changethesis',route.changethesis)
 module.exports = router

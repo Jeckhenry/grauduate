@@ -16,6 +16,11 @@ const teachingcourse = require('../model/teacingcourseware')//教学课件
 const important = require('../model/importsthings')//重点和难点
 const teachref = require('../model/teachreform')
 const testref = require('../model/testref')
+const interteach = require('../model/interteach')
+const bookachieve = require('../model/booksachieve')
+const thesis = require('../model/thesis')
+const master = require('../model/master')
+const teachieve = require('../model/teachachieve')
 var resdata;
 exports.initData = (req,res,next)=>{
     resdata = {
@@ -412,3 +417,43 @@ exports.changetestref = (req,res)=>{
         res.end()
     })
 }
+exports.changeinterteach = (req,res)=>{
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{ingcharac:req.body.classmsg,
+        inglink:req.body.feater}};
+    interteach.update(oldValue,newValue,function (err) {
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+exports.delbookachieve = (req,res)=>{
+    var contion = req.body.middle;
+    bookachieve.remove({_id:contion},(err,req)=>{
+        if (err){
+            return
+        }
+    })
+}
+exports.delthesis = (req,res)=>{
+    thesis.remove({_id:req.body.middle},(err,rq)=>{
+
+    })
+}
+exports.changethesis = (req,res)=>{
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{ author:req.body.week,
+        title:req.body.teacing,
+        magazine:req.body.article,
+        date:req.body.method}};
+    thesis.update(oldValue,newValue,function (err) {
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+

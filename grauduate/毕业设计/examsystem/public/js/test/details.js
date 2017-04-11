@@ -14,4 +14,8 @@ $(function(){
         }
     }
     setInterval(canl,3000)
+    $('#up').click(function () {
+        $('body').animate({"scroll-top":0},500)
+        $("html").animate({"scroll-top":0},500);
+    })
 })

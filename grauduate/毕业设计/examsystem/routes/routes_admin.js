@@ -18,6 +18,11 @@ const teachingcourse = require('../model/teacingcourseware')//教学课件
 const important = require('../model/importsthings')//重点和难点
 const teachreform = require('../model/teachreform')
 const testref = require('../model/testref')
+const interteach = require('../model/interteach')
+const booksachieve = require('../model/booksachieve')
+const thesis = require('../model/thesis')
+const master = require('../model/master')
+const teachieve = require('../model/teachachieve')
 //此页面添加网站后台其他部分的路由
 exports.showAdmin = (req,res)=>{
         user.find({}).then((result)=>{
@@ -553,11 +558,116 @@ exports.showtestteach = (req,res)=>{
 }
 //网络教学
 exports.showinterTeach = (req,res)=>{
-    res.render('index/interteach')
+    interteach.find({}).then((result1)=>{
+        teachingcourse.find({}).then((result2)=>{
+            res.render('index/interteach',{
+                interteach:result1,
+                course:result2
+            })
+        })
+    })
+}
+exports.showinterteachs = (req,res)=>{
+    interteach.find({}).then((result)=>{
+        res.render('main/interteach',{
+            $_result:result
+        })
+    })
+}
+exports.addintertach = (req,res)=>{
+    resdata1.statusCode = 14
+    interteach.create({ingcharac:req.body.ingcharacter,
+        inglink:req.body.inglink},(err)=>{
+        if (err){
+            resdata1.msg = '添加失败'
+            return
+        }
+        resdata1.msg = '添加成功'
+    })
+    res.render('admin/details',{
+        mes:resdata1
+    })
 }
 //成果展示
 exports.showachieve = (req,res)=>{
-    res.render('index/achieve')
+    booksachieve.find({}).then((result)=>{
+        res.render('index/achieve',{
+            achieveimg:result
+        })
+    })
+}
+exports.showachievebookimg = (req,res)=>{
+    booksachieve.find({}).then((result)=>{
+        res.render('main/bookachieve',{
+            builds:result
+        })
+    })
+}
+exports.addachieveimg = (req,res)=>{
+    resdata1.statusCode = 15
+    //上传书籍图片
+    if(req.url==='/addachieveimg'&&req.method.toLocaleLowerCase()=='post'){
+        var form = new formidable.IncomingForm();
+        form.uploadDir='./tmp'
+        form.parse(req, function(err, fields, files) {
+            if (err){
+                console.log(err)
+                return
+            }
+            var newpath = "./public/img/"
+                if(!files.bookimg.type.includes('image')){
+                    resdata1.msg = '请上传图片类型'
+                    res.render('admin/details',{
+                        mes:resdata1
+                    })
+                    return
+                }
+                if(files.bookimg.size/1000>3000){
+                    resdata1.msg = '文件不得大于3M'
+                    res.render('admin/details',{
+                        mes:resdata1
+                    })
+                    return
+                }
+                fs.rename(files.bookimg.path,newpath+files.bookimg.name,function(err){
+                    resdata1.msg = '上传成功'
+                    booksachieve.create({
+                        bookname:files.bookimg.name,
+                    },(err)=>{
+
+                    })
+                })
+        });
+    }
+    res.render('admin/details',{
+        mes:resdata1
+    })
+}
+//添加论文---成果展示
+exports.addthesis = (req,res)=>{
+    resdata1.statusCode = 16
+    thesis.create({
+        author:req.body.thesisauthor,
+        title:req.body.thesistitle,
+        magazine:req.body.thesismage,
+        date:req.body.thesisdate,
+    },(err)=>{
+        if (err){
+            resdata1.msg = '添加失败'
+            return
+        }
+        resdata1.msg = '添加成功'
+    })
+    res.render('admin/details',{
+        mes:resdata1
+    })
+}
+exports.showthesis = (req,res)=>{
+    thesis.find({}).then((result)=>{
+        res.render('main/thesis',{
+            $_result:result
+        })
+    })
 }
 //教学改革
 exports.showteachingreform = (req,res)=>{

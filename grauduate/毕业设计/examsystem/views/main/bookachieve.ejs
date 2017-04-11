@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/test/public.css">
+    <title>书籍图片信息</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 sdf">
+            <img src="/img/top1_r1_c1.gif" alt="..">
+        </div>
+        <div class="col-lg-6 visible-lg character">
+            书籍图片信息
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <input type="text" name="middle" id="middle" style="display: none">
+        <div id="waring"></div>
+        <input type="text" id="middle" style="display: none" name="middle">
+        <table class="table table-bordered table-responsive model">
+            <thead>
+            <th class="text-center">ID</th>
+            <th class="text-center">图书名称</th>
+            <th class="text-center">操作</th>
+            </thead>
+            <tbody>
+            <%for(var i=0;i<builds.length;i++){%>
+            <tr>
+                <td><%=builds[i]._id%></td>
+                <td name="auth" class="ar"><%=builds[i].bookname%></td>
+                <td  class="text-center">
+                    <input type="button" class="del btn" value="删除"></input>
+                </td>
+            </tr>
+            <%}%>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/angular_1.5.8.min.js"></script>
+<script src="/js/test/bookachieve.js"></script>
+</body>
+</html>
