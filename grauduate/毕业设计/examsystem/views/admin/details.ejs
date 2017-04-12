@@ -58,13 +58,20 @@
             <li role="presentation"><a href="#intertestmessage">网络教学信息库</a></li>
             <li role="presentation"><a href="#booksimgmessage">书籍图片信息</a></li>
             <li role="presentation"><a href="#thesismessage">发表的论文信息</a></li>
+            <li role="presentation"><a href="#teachievemessage">教学成果奖</a></li>
+            <li role="presentation"><a href="#mastermessage">硕士生论文</a></li>
+            <li role="presentation"><a href="#doublelanteachmessage">双语教学教师队伍</a></li>
+            <li role="presentation"><a href="#doublebookmessage">双语教材</a></li>
+            <li role="presentation"><a href="#doublewaremessage">双语教学课件</a></li>
+            <li role="presentation"><a href="#doublerefmessage">双语教学参考文献</a></li>
+            <li role="presentation"><a href="#doublecoursemessage">双语教学习题</a></li>
+            <li role="presentation"><a href="#doubletestmessage">双语教学试卷</a></li>
         </ul>
     </div>
     <!--题库操作部分-->
     <div class="container">
         <b>后台页面：</b>
         <ul class="nav nav-pills">
-            <li role="presentation"><a href="/admin/details">操作数据库</a></li>
             <li role="presentation"><a href="/admin/admin" target="_blank">用户列表</a></li>
             <li role="presentation"><a href="/admin/test" target="_blank">题库</a></li>
             <li role="presentation"><a href="/admin/site" target="_blank">网址库</a></li>
@@ -82,7 +89,15 @@
             <li role="presentation"><a href="/admin/testref" target="_blank">考试改革库</a></li>
             <li role="presentation"><a href="/admin/interteachmain" target="_blank">网络教学信息库</a></li>
             <li role="presentation"><a href="/admin/bookachieve" target="_blank">书籍图片信息</a></li>
-            <li role="presentation"><a href="/admin/thesis" target="_blank">发表的论文信息</a></li>
+            <li role="presentation"><a href="/admin/thesis" target="_blank">发表的论文</a></li>
+            <li role="presentation"><a href="/admin/teachieve" target="_blank">教学成果</a></li>
+            <li role="presentation"><a href="/admin/master" target="_blank">硕士生毕业论文</a></li>
+            <li role="presentation"><a href="/admin/doubleteacher" target="_blank">双语教学教师队伍</a></li>
+            <li role="presentation"><a href="/admin/doublebook" target="_blank">双语教材</a></li>
+            <li role="presentation"><a href="/admin/doubleware" target="_blank">双语教学课件</a></li>
+            <li role="presentation"><a href="/admin/doubleref" target="_blank">双语教学参考文献</a></li>
+            <li role="presentation"><a href="/admin/doublecourse" target="_blank">双语教学习题</a></li>
+            <li role="presentation"><a href="/admin/doubletest" target="_blank">双语教学试卷</a></li>
         </ul>
         <div id="question">
         <h3>添加题目模块：</h3>
@@ -654,6 +669,205 @@
                     <button class="btn btn-primary" type="submit">确认添加</button>
                 </div>
                 <%if(mes.statusCode===16){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--添加教学成果奖及证书-->
+        <div id="teachievemessage">
+            <br>
+            <h3>添加教学成果奖及证书：</h3>
+            <form action="/admin/addteachieve" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="teachieveartile" class="col-md-5 control-label">内容：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachieveartile" placeholder="请输入内容" class="form-control" name="teachieveartile">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachieveaward" class="col-md-5 control-label">奖项：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachieveaward" placeholder="请输入奖项" class="form-control" name="teachieveaward">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachievedate" class="col-md-5 control-label">日期：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachievedate" placeholder="请输入日期" class="form-control" name="teachievedate">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===17){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <div id="mastermessage">
+            <br>
+            <h3>添加硕士生论文：</h3>
+            <form action="/admin/addmaster" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="mastername" class="col-md-5 control-label">作者：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="mastername" placeholder="请输入作者" class="form-control" name="mastername">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mastertitle" class="col-md-5 control-label">论文题目：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="mastertitle" placeholder="请输入论文题目" class="form-control" name="mastertitle">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===18){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <div id="doublelanteachmessage">
+            <br>
+            <h3>添加双语教学教师信息：</h3>
+            <form action="/admin/adddoubleteacher" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="doubleteachername" class="col-md-5 control-label">姓名：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="doubleteachername" placeholder="请输入姓名" class="form-control" name="doubleteachername">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="doubleteachersex" class="col-md-5 control-label">性别：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="doubleteachersex" placeholder="请输入性别" class="form-control" name="doubleteachersex">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="doubleteacherbirth" class="col-md-5 control-label">出生年月：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="doubleteacherbirth" placeholder="请输入出生年月" class="form-control" name="doubleteacherbirth">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="doubleteacherposts" class="col-md-5 control-label">职务：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="doubleteacherposts" placeholder="请输入职务" class="form-control" name="doubleteacherposts">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="doubleteacherprofession" class="col-md-5 control-label">学科专业：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="doubleteacherprofession" placeholder="请输入学科专业" class="form-control" name="doubleteacherprofession">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="doubleteacherwork" class="col-md-5 control-label">教学中的工作：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="doubleteacherwork" placeholder="请输入教学中的工作" class="form-control" name="doubleteacherwork">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===19){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <div id="doublebookmessage">
+            <br>
+            <h3>添加双语教材信息：</h3>
+            <form action="/admin/adddoublebook" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="doublebookname" class="col-md-5 control-label">教材名称：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="doublebookname" placeholder="请输入教材名称" class="form-control" name="doublebookname">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="doublebookpub" class="col-md-5 control-label">出版社：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="doublebookpub" placeholder="请输入出版社" class="form-control" name="doublebookpub">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===20){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <div id="doublewaremessage">
+            <br>
+            <h3>添加双语教学课件：</h3>
+            <form action="/admin/adddoubleware" enctype="multipart/form-data" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="doubleware" class="col-md-5 control-label">上传课件：</label>
+                    <div class="col-md-4">
+                        <input type="file" id="doubleware" class="form-control" name="doubleware">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===21){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <div id="doublerefmessage">
+            <br>
+            <h3>添加双语教学参考文献：</h3>
+            <form action="/admin/adddoubleref" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="doubleref" class="col-md-5 control-label">参考文献：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="doubleref" placeholder="请输入参考文献" class="form-control" name="doubleref">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===22){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <div id="doublecoursemessage">
+            <br>
+            <h3>添加双语教学习题：</h3>
+            <form action="/admin/adddoublecourse" enctype="multipart/form-data" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="doublecourse" class="col-md-5 control-label">习题（章节）：</label>
+                    <div class="col-md-4">
+                        <input type="file" id="doublecourse"  class="form-control" name="doublecourse">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===23){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <div id="doubletestmessage">
+            <br>
+            <h3>添加双语教学试卷：</h3>
+            <form action="/admin/adddoubletest" enctype="multipart/form-data" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="doubletest" class="col-md-5 control-label">试卷：</label>
+                    <div class="col-md-4">
+                        <input type="file" id="doubletest"  class="form-control" name="doubletest">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===24){%>
                 <p class="msg"><%=mes.msg%></p>
                 <%}%>
             </form>

@@ -21,6 +21,13 @@ const bookachieve = require('../model/booksachieve')
 const thesis = require('../model/thesis')
 const master = require('../model/master')
 const teachieve = require('../model/teachachieve')
+const doubleteacher = require('../model/doublelanteacher')//教师队伍
+const doublebook = require('../model/doublebooks')//教材
+const doublecourse = require('../model/doublecourse')//习题
+const doubleware = require('../model/doubleteachware')//课件
+const doubletests = require('../model/doubletests')//试卷
+const doublerefe = require('../model/doublereference')//参考书
+
 var resdata;
 exports.initData = (req,res,next)=>{
     resdata = {
@@ -456,4 +463,102 @@ exports.changethesis = (req,res)=>{
         res.end()
     })
 }
-
+exports.delteachieve = (req,res)=>{
+    var contion = req.body.middle;
+    teachieve.remove({_id:contion},(err,req)=>{
+        if (err){
+            return
+        }
+    })
+}
+exports.changeteachieve = (req,res)=>{
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{ article:req.body.week,
+        award:req.body.teacing,
+        date:req.body.article,}};
+    teachieve.update(oldValue,newValue,function (err) {
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+exports.delmaster = (req,res)=>{
+    var contion = req.body.middle;
+    master.remove({_id:contion},(err,req)=>{
+        if (err){
+            return
+        }
+    })
+}
+exports.changemaster = (req,res)=>{
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:{ author:req.body.weeks,
+        title:req.body.teacing,}};
+    master.update(oldValue,newValue,function (err) {
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+function  delmseeage(req,database) {
+    var contion = req.body.middle;
+    database.remove({_id:contion},(err,req)=>{
+        if (err){
+            return
+        }
+    })
+}
+function  changemessage(req,database,contion,res) {
+    var oldValue = {_id:req.body.middle}
+    var newValue = {$set:contion};
+    database.update(oldValue,newValue,function (err) {
+        if (err){
+            console.log(err)
+            return
+        }
+        res.end()
+    })
+}
+exports.deldoubleteacher = (req,res)=>{
+    delmseeage(req,doubleteacher)
+}
+exports.changedoubleteacher = (req,res)=>{
+    changemessage(req,doubleteacher,{
+        name:req.body.weeks,
+        sex:req.body.teacing,
+        birth:req.body.article,
+        posts:req.body.method,
+        profession:req.body.example,
+        works:req.body.exercise
+    },res)
+}
+exports.deldoublebook = (req,res)=>{
+    delmseeage(req,doublebook)
+}
+exports.changedoublebook = (req,res)=>{
+    changemessage(req,doublebook,{
+        booksname:req.body.weeks,
+        bookpublisher:req.body.teacing
+    },res)
+}
+exports.deldoublewares = (req,res)=>{
+    delmseeage(req,doubleware)
+}
+exports.deldoubleref = (req,res)=>{
+    delmseeage(req,doublerefe)
+}
+exports.changedoubleref = (req,res)=>{
+    changemessage(req,doublerefe,{
+        referencename:req.body.weeks
+    },res)
+}
+exports.deldoublecourse = (req,res)=>{
+    delmseeage(req,doublecourse)//习题
+}
+exports.deldoubletest = (req,res)=>{
+    delmseeage(req,doubletests)//试卷
+}

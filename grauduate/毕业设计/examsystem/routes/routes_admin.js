@@ -23,6 +23,36 @@ const booksachieve = require('../model/booksachieve')
 const thesis = require('../model/thesis')
 const master = require('../model/master')
 const teachieve = require('../model/teachachieve')
+//双语教学
+const doubleteacher = require('../model/doublelanteacher')//教师队伍
+const doublebook = require('../model/doublebooks')//教材
+const doublecourse = require('../model/doublecourse')//习题
+const doubleware = require('../model/doubleteachware')//课件
+const doubletests = require('../model/doubletests')//试卷
+const doublerefe = require('../model/doublereference')//参考书
+
+
+function  adddatabase(database,message,res) {
+    database.create(message,(err)=>{
+        if (err){
+            resdata1.msg = '添加失败'
+            return
+        }
+        resdata1.msg = '添加成功'
+    })
+    res.render('admin/details',{
+        mes:resdata1
+    })
+}
+function  showmessage(database,site,res) {
+    database.find({}).then((result)=>{
+        res.render(site,{
+            $_result:result
+        })
+    })
+}
+
+
 //此页面添加网站后台其他部分的路由
 exports.showAdmin = (req,res)=>{
         user.find({}).then((result)=>{
@@ -550,8 +580,203 @@ exports.showimportsmsg = (req,res)=>{
 }
 //双语教学
 exports.showdouble = (req,res)=>{
-    res.render('index/doublelan')
+    doubleteacher.find({}).then((result1)=>{
+        doublebook.find({}).then((result2)=>{
+            doubleware.find({}).then((result3)=>{
+                doublecourse.find({}).then((result4)=>{
+                    doubletests.find({}).then((result5)=>{
+                        doublerefe.find({}).then((result6)=>{
+                            res.render('index/doublelan',{
+                                doubteacher:result1,
+                                doublebook:result2,
+                                doubleware:result3,
+                                doublecourse:result4,
+                                doubletest:result5,
+                                doubleref:result6
+                            })
+                        })
+                    })
+                })
+            })
+        })
+    })
 }
+exports.adddoubleteacher = (req,res)=>{
+    resdata1.statusCode = 19
+    adddatabase(doubleteacher,{name:req.body.doubleteachername,
+             sex:req.body.doubleteachersex,
+            birth:req.body.doubleteacherbirth,
+             posts:req.body.doubleteacherposts,
+             profession:req.body.doubleteacherprofession,
+             works:req.body.doubleteacherwork},res)
+}
+exports.showdoubleteacher = (req,res)=>{
+    showmessage(doubleteacher,'main/doubleteacher',res)
+}
+exports.adddoublebooks = (req,res)=>{
+    resdata1.statusCode = 20
+    adddatabase(doublebook,{
+        booksname:req.body.doublebookname,
+        bookpublisher:req.body.doublebookpub
+    },res)
+}
+exports.showdoublebook = (req,res)=>{
+    showmessage(doublebook,'main/doublebook',res)
+}
+exports.adddoubleware = (req,res)=>{
+    resdata1.statusCode = 21
+    if(req.url==='/adddoubleware'&&req.method.toLocaleLowerCase()=='post'){
+        var form = new formidable.IncomingForm();
+        form.uploadDir='./tmp'
+        form.parse(req, function(err, fields, files) {
+            if (err){
+                console.log(err)
+                return
+            }
+            var oldpath = files.doubleware.path
+            var newpath = "./public/teachcourse/"+files.doubleware.name
+            img_path = files.doubleware.name
+            if(!files.doubleware.type.includes('application')){
+                resdata1.msg = '请上传文档类型'
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+                return
+            }
+            if(files.doubleware.size/1000>3000){
+                resdata1.msg = '文件不得大于3M'
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+                return
+            }
+            fs.rename(oldpath,newpath,function(err){
+                resdata1.msg = '上传成功'
+                //允许有同名同姓的教师存在
+                doubleware.create({
+                    teachname: img_path
+                },(err)=>{
+                    if (err){
+                        resdata1.msg = '添加失败'
+                        return
+                    }
+                    resdata1.msg = '添加成功'
+                })
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+            })
+        });
+    }
+}
+exports.showdoubleware = (req,res)=>{
+    showmessage(doubleware,'main/doubleware',res)
+}
+exports.adddoubleref = (req,res)=>{
+    adddatabase(doublerefe,{ referencename:req.body.doubleref},res)
+}
+exports.showdoubleref = (req,res)=>{
+    showmessage(doublerefe,'main/doubleref',res)
+}
+exports.adddoublecourse = (req,res)=>{
+    resdata1.statusCode = 23
+    if(req.url==='/adddoublecourse'&&req.method.toLocaleLowerCase()=='post'){
+        var form = new formidable.IncomingForm();
+        form.uploadDir='./tmp'
+        form.parse(req, function(err, fields, files) {
+            if (err){
+                console.log(err)
+                return
+            }
+            var oldpath = files.doublecourse.path
+            var newpath = "./public/teachcourse/"+files.doublecourse.name
+            img_path = files.doublecourse.name
+            if(!files.doublecourse.type.includes('application')){
+                resdata1.msg = '请上传文档类型'
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+                return
+            }
+            if(files.doublecourse.size/1000>3000){
+                resdata1.msg = '文件不得大于3M'
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+                return
+            }
+            fs.rename(oldpath,newpath,function(err){
+                resdata1.msg = '上传成功'
+                //允许有同名同姓的教师存在
+                doublecourse.create({
+                    coursename: img_path
+                },(err)=>{
+                    if (err){
+                        resdata1.msg = '添加失败'
+                        return
+                    }
+                    resdata1.msg = '添加成功'
+                })
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+            })
+        });
+    }
+}
+exports.adddoubletests = (req,res)=>{
+    resdata1.statusCode = 24
+    if(req.url==='/adddoubletest'&&req.method.toLocaleLowerCase()=='post'){
+        var form = new formidable.IncomingForm();
+        form.uploadDir='./tmp'
+        form.parse(req, function(err, fields, files) {
+            if (err){
+                console.log(err)
+                return
+            }
+            var oldpath = files.doubletest.path
+            var newpath = "./public/teachcourse/"+files.doubletest.name
+            img_path = files.doubletest.name
+            if(!files.doubletest.type.includes('application')){
+                resdata1.msg = '请上传文档类型'
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+                return
+            }
+            if(files.doubletest.size/1000>3000){
+                resdata1.msg = '文件不得大于3M'
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+                return
+            }
+            fs.rename(oldpath,newpath,function(err){
+                resdata1.msg = '上传成功'
+                //允许有同名同姓的教师存在
+                doubletests.create({
+                    testsname: img_path
+                },(err)=>{
+                    if (err){
+                        resdata1.msg = '添加失败'
+                        return
+                    }
+                    resdata1.msg = '添加成功'
+                })
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+            })
+        });
+    }
+}
+exports.showdoublecourse = (req,res)=>{
+    showmessage(doublecourse,'main/doublecourse',res)
+}
+exports.showdoubletest = (req,res)=>{
+    showmessage(doubletests,'main/doubletest',res)
+}
+
 //实验教学
 exports.showtestteach = (req,res)=>{
     res.render('index/testteach')
@@ -590,9 +815,18 @@ exports.addintertach = (req,res)=>{
 }
 //成果展示
 exports.showachieve = (req,res)=>{
-    booksachieve.find({}).then((result)=>{
-        res.render('index/achieve',{
-            achieveimg:result
+    booksachieve.find({}).then((result1)=>{
+        thesis.find({}).then((result2)=>{
+            teachieve.find({}).then((result3)=>{
+                master.find({}).then((result4)=>{
+                    res.render('index/achieve',{
+                        achieveimg:result1,
+                        thesismsg:result2,
+                        teachieves:result3,
+                        masters:result4
+                    })
+                })
+            })
         })
     })
 }
@@ -666,6 +900,51 @@ exports.showthesis = (req,res)=>{
     thesis.find({}).then((result)=>{
         res.render('main/thesis',{
             $_result:result
+        })
+    })
+}
+//添加教学成果奖项和证书
+exports.addteachieves = (req,res)=>{
+    resdata1.statusCode = 17
+    teachieve.create({
+        article:req.body.teachieveartile,
+        award:req.body.teachieveaward,
+        date:req.body.teachievedate,
+    },(err)=>{
+        if (err){
+            resdata1.msg = '添加失败'
+            return
+        }
+        resdata1.msg = '添加成功'
+    })
+    res.render('admin/details',{
+        mes:resdata1
+    })
+}
+exports.showteachieve = (req,res)=>{
+    teachieve.find({}).then((result)=>{
+        res.render('main/teachieve',{
+            builds:result
+        })
+    })
+}
+exports.addmaster = (req,res)=>{
+    master.create({ author:req.body.mastername,
+        title:req.body.mastertitle},(err)=>{
+        if (err){
+            resdata1.msg = '添加失败'
+            return
+        }
+        resdata1.msg = '添加成功'
+    })
+    res.render('admin/details',{
+        mes:resdata1
+    })
+}
+exports.showmaster = (req,res)=>{
+    master.find({}).then((result)=>{
+        res.render('main/master',{
+            user :result
         })
     })
 }

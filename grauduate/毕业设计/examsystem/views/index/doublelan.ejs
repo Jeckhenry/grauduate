@@ -105,6 +105,16 @@
                                 <td>学科专业</td>
                                 <td>教学中的工作</td>
                             </tr>
+                            <%for(var i=0;i<doubteacher.length;i++){%>
+                            <tr>
+                                <td><%=doubteacher[i].name%></td>
+                                <td><%=doubteacher[i].sex%></td>
+                                <td><%=doubteacher[i].birth%></td>
+                                <td><%=doubteacher[i].posts%></td>
+                                <td><%=doubteacher[i].profession%></td>
+                                <td><%=doubteacher[i].works%></td>
+                            </tr>
+                            <%}%>
                         </table>
                     </li>
                     <li class="artimsg">
@@ -114,6 +124,12 @@
                                 <td>教材名称</td>
                                 <td>出版社</td>
                             </tr>
+                            <%for (var i=0;i<doublebook.length;i++){%>
+                            <tr>
+                                <td><%=doublebook[i].booksname%></td>
+                                <td><%=doublebook[i].bookpublisher%></td>
+                            </tr>
+                            <%}%>
                         </table>
                     </li>
                     <li class="bookpre">
@@ -124,6 +140,13 @@
                                 <td>课件格式</td>
                                 <td>下载</td>
                             </tr>
+                            <%for (var i=0;i<doubleware.length;i++){%>
+                            <tr>
+                                <td><%=doubleware[i].teachname%></td>
+                                <td>文档</td>
+                                <td class="text-center"><a class="teachware"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                            </tr>
+                            <%}%>
                         </table>
                     </li>
                     <li class="bookafter">
@@ -134,6 +157,13 @@
                                 <td>格式</td>
                                 <td>下载</td>
                             </tr>
+                            <%for (var i=0;i<doublecourse.length;i++){%>
+                            <tr>
+                                <td><%=doublecourse[i].coursename%></td>
+                                <td>文档</td>
+                                <td class="text-center"><a class="teachware"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                            </tr>
+                            <%}%>
                         </table>
                     </li>
                     <li class="bookcolor">
@@ -144,14 +174,25 @@
                                 <td>格式</td>
                                 <td>下载</td>
                             </tr>
+                            <%for (var i=0;i<doubletest.length;i++){%>
+                            <tr>
+                                <td><%=doubletest[i].testsname%></td>
+                                <td>文档</td>
+                                <td class="text-center"><a class="teachware"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                            </tr>
+                            <%}%>
                         </table>
                     </li>
                     <li class="reader">
                         <h3>参考文献</h3>
                         <div class="textar">
-                            <ul>
-
-                            </ul>
+                            <table>
+                                <%for (var i=0;i<doubleref.length;i++){%>
+                                <tr>
+                                    <td>·<%=doubleref[i].referencename%></td>
+                                </tr>
+                                <%}%>
+                            </table>
                         </div>
                     </li>
                 </ul>
@@ -174,7 +215,10 @@
     }
     $(function () {
         $('.arti li').not(':first').hide();
-
+        $('.teachware').click(function(){
+            var path = "http://127.0.0.1/teachcourse/"+$(this).parent().prev().prev().text()
+            $(this).attr('href',path)
+        })
     })
 </script>
 </body>

@@ -1,0 +1,22 @@
+typeof的结果类型：number,string,boolean,object,function,undefined
+js的基本数据类型：布尔，字符串，undefined，null，number，
+js的基本对象类型：布尔，字符串，数组，object，date,function,math,正则
+classlist和classname的区别：classname在对其中某些类进行操作时必须每次设置整个字符串，而classlist不需要，直接用add,remove等方法就可以，且不会影响其他类
+eval()函数；将一个字符串解析成对应的数据格式，即为将外层双引号脱去。性能存在问题。	
+三级联动：！！！
+H5新增的六个表单属性：
+阻止默认事件：event.preventDefault()；event.stopPropagation()；event.returnValue=false
+indexof：
+css预编译处理器
+cookie不支持文件系统存放！！！
+回调函数//同步//异步
+清除浮动的方法！
+null和undefined的区别！
+响应式布局和自适应布局、、
+响应式字体和图片
+$.each()和$().each：$.each()与$(selector).each()不同, 后者专用于jquery对象的遍历, 前者可用于遍历任何的集合(无论是数组或对象),如果是数组,回调函数每次传入数组的索引和对应的值(值亦可以通过this 关键字获取,但javascript总会包装this 值作为一个对象—尽管是一个字符串或是一个数字),方法会返回被遍历对象的第一参数.
+
+
+
+谨记  在编代码尤其是选框中，一定要设置value!!!!!!!!!!!!!!!!!  即：序列化
+
