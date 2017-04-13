@@ -27,6 +27,12 @@ const doublecourse = require('../model/doublecourse')//习题
 const doubleware = require('../model/doubleteachware')//课件
 const doubletests = require('../model/doubletests')//试卷
 const doublerefe = require('../model/doublereference')//参考书
+const testteach = require('../model/testteach')//实验教学指导思想和课程设计
+const testtitle = require('../model/testtile')//实验教学题目及参考答案
+const testcourse = require('../model/testcourse')//实验教学创新实践作业
+const testexample = require('../model/testexample')//综合实例
+const testware = require('../model/testteachware')//实验教学课件
+
 
 var resdata;
 exports.initData = (req,res,next)=>{
@@ -561,4 +567,22 @@ exports.deldoublecourse = (req,res)=>{
 }
 exports.deldoubletest = (req,res)=>{
     delmseeage(req,doubletests)//试卷
+}
+exports.changetestteach = (req,res)=>{
+    changemessage(req,testteach,{
+        guiding:req.body.classmsg,
+        design:req.body.feater,
+    },res)
+}
+exports.deltestware = (req,res)=>{
+    delmseeage(req,testware)
+}
+exports.deltestcourse = (req,res)=>{
+    delmseeage(req,testcourse)
+}
+exports.deltesttitle = (req,res)=>{
+    delmseeage(req,testtitle)
+}
+exports.deltestexample = (req,res)=>{
+    delmseeage(req,testexample)
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/test/testmodel.css">
+    <link rel="stylesheet" href="/css/test/public.css">
+    <title>实验教学--综合实例</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 sdf">
+            <img src="/img/top1_r1_c1.gif" alt="..">
+        </div>
+        <div class="col-lg-6 visible-lg character">
+            实验教学--综合实例
+        </div>
+    </div>
+    <hr/>
+
+    <input type="text" id="middle" style="display: none" name="middle">
+    <div class="row">
+        <table class="table table-bordered table-responsive model">
+            <thead>
+            <th class="text-center">ID</th>
+            <th class="text-center">题目</th>
+            <th class="text-center">答案</th>
+            <th class="text-center">操作</th>
+            </thead>
+            <tbody>
+            <%for(var i=0;i<$_result.length;i++){%>
+            <tr>
+                <td><%=$_result[i]._id%></td>
+                <td class="ar" name="username"><%=$_result[i].question%></td>
+                <td class="ar" name="password"><%=$_result[i].answer%></td>
+                <td  class="text-center">
+                    <input type="button" class="del btn" value="删除"></input>
+                </td>
+            </tr>
+            <%}%>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/test/testtitle.js"></script>
+</body>
+</html>

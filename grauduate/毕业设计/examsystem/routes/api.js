@@ -54,5 +54,10 @@ router.post('/deldoubleref',route.deldoubleref)
 router.post('/changedoubleref',route.changedoubleref)
 router.post('/deldoublecourse',route.deldoublecourse)
 router.post('/deldoubletest',route.deldoubletest)
+router.post('/changetestteach',route.changetestteach)
+router.post('/deltesttitle',route.deltesttitle)
+router.post('/deltestcourse',route.deltestcourse)
+router.post('/deltestexample',route.deltestexample)
+router.post('/deltestware',route.deltestware)
 
 module.exports = router

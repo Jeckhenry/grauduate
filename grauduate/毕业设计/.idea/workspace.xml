@@ -15,111 +15,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="admin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examsystem/routes/admin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="53" column="23" lean-forward="false" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes_admin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examsystem/routes/routes_admin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="594" column="41" lean-forward="false" selection-start-line="594" selection-start-column="32" selection-end-line="594" selection-end-column="41" />
-              <folding>
-                <element signature="e#1916#2051#0" expanded="false" />
-                <element signature="e#2082#2205#0" expanded="false" />
-                <element signature="e#2240#2316#0" expanded="false" />
-                <element signature="e#2470#3098#0" expanded="false" />
-                <element signature="e#3148#3222#0" expanded="false" />
-                <element signature="e#3256#3290#0" expanded="false" />
-                <element signature="e#3325#3427#0" expanded="false" />
-                <element signature="e#3464#4015#0" expanded="false" />
-                <element signature="e#4047#4163#0" expanded="false" />
-                <element signature="e#4196#4316#0" expanded="false" />
-                <element signature="e#4358#4484#0" expanded="false" />
-                <element signature="e#4518#4642#0" expanded="false" />
-                <element signature="e#4675#6683#0" expanded="false" />
-                <element signature="e#6714#7160#0" expanded="false" />
-                <element signature="e#7194#7315#0" expanded="false" />
-                <element signature="e#7350#7475#0" expanded="false" />
-                <element signature="e#7527#7988#0" expanded="false" />
-                <element signature="e#8040#8535#0" expanded="false" />
-                <element signature="e#8579#8891#0" expanded="false" />
-                <element signature="e#8923#9044#0" expanded="false" />
-                <element signature="e#9078#9197#0" expanded="false" />
-                <element signature="e#9231#9354#0" expanded="false" />
-                <element signature="e#9385#9729#0" expanded="false" />
-                <element signature="e#9773#10419#0" expanded="false" />
-                <element signature="e#10452#10815#0" expanded="false" />
-                <element signature="e#10844#11426#0" expanded="false" />
-                <element signature="e#11459#11870#0" expanded="false" />
-                <element signature="e#11907#13448#0" expanded="false" />
-                <element signature="e#13486#15027#0" expanded="false" />
-                <element signature="e#15062#15186#0" expanded="false" />
-                <element signature="e#15223#15342#0" expanded="false" />
-                <element signature="e#15378#15510#0" expanded="false" />
-                <element signature="e#15545#15672#0" expanded="false" />
-                <element signature="e#15709#15833#0" expanded="false" />
-                <element signature="e#16738#17083#0" expanded="false" />
-                <element signature="e#17123#17182#0" expanded="false" />
-                <element signature="e#17219#17379#0" expanded="false" />
-                <element signature="e#17416#17469#0" expanded="false" />
-                <element signature="e#17505#19015#0" expanded="false" />
-                <element signature="e#19337#20862#0" expanded="false" />
-                <element signature="e#20899#22410#0" expanded="false" />
-                <element signature="e#22722#22961#0" expanded="false" />
-                <element signature="e#22999#23128#0" expanded="false" />
-                <element signature="e#23163#23473#0" expanded="false" />
-                <element signature="e#23514#23997#0" expanded="false" />
-                <element signature="e#24038#24168#0" expanded="false" />
-                <element signature="e#24204#25480#0" expanded="false" />
-                <element signature="e#25526#25918#0" expanded="false" />
-                <element signature="e#25951#26072#0" expanded="false" />
-                <element signature="e#26122#26489#0" expanded="false" />
-                <element signature="e#26525#26650#0" expanded="false" />
-                <element signature="e#26682#26957#0" expanded="false" />
-                <element signature="e#26990#27108#0" expanded="false" />
-                <element signature="e#27156#27291#0" expanded="false" />
-                <element signature="e#27327#27458#0" expanded="false" />
-                <element signature="e#27495#27923#0" expanded="false" />
-                <element signature="e#27967#28097#0" expanded="false" />
-                <element signature="e#28131#28253#0" expanded="false" />
-                <element signature="e#28289#28849#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="doublelan.ejs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/examsystem/views/index/doublelan.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="220" column="10" lean-forward="false" selection-start-line="220" selection-start-column="10" selection-end-line="220" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="classteach.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examsystem/views/index/classteach.ejs">
+      <file leaf-file-name="teachmove.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examsystem/views/index/teachmove.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="213" column="10" lean-forward="true" selection-start-line="210" selection-start-column="8" selection-end-line="213" selection-end-column="10" />
+              <caret line="124" column="6" lean-forward="true" selection-start-line="116" selection-start-column="4" selection-end-line="124" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="doublereference.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examsystem/model/doublereference.js">
+      <file leaf-file-name="teachresult.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examsystem/views/index/teachresult.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="337">
+              <caret line="124" column="6" lean-forward="false" selection-start-line="124" selection-start-column="6" selection-end-line="124" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teachcontrolle.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/examsystem/views/index/teachcontrolle.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="124" column="6" lean-forward="false" selection-start-line="124" selection-start-column="6" selection-end-line="124" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -139,25 +59,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/examsystem/views/main/teacher.ejs" />
-        <option value="$PROJECT_DIR$/examsystem/views/main/teachmsg.ejs" />
-        <option value="$PROJECT_DIR$/examsystem/views/main/testmodel.ejs" />
-        <option value="$PROJECT_DIR$/examsystem/public/js/test/teachref.js" />
-        <option value="$PROJECT_DIR$/examsystem/public/css/test/public.css" />
-        <option value="$PROJECT_DIR$/examsystem/model/testref.js" />
-        <option value="$PROJECT_DIR$/examsystem/views/index/testreform.ejs" />
-        <option value="$PROJECT_DIR$/examsystem/views/main/testref.ejs" />
-        <option value="$PROJECT_DIR$/examsystem/public/js/test/testref.js" />
-        <option value="$PROJECT_DIR$/examsystem/model/interteach.js" />
-        <option value="$PROJECT_DIR$/examsystem/views/index/interteach.ejs" />
-        <option value="$PROJECT_DIR$/examsystem/public/js/test/interteach.js" />
-        <option value="$PROJECT_DIR$/examsystem/views/main/interteach.ejs" />
-        <option value="$PROJECT_DIR$/examsystem/model/booksachieve.js" />
-        <option value="$PROJECT_DIR$/examsystem/public/js/test/bookachieve.js" />
-        <option value="$PROJECT_DIR$/examsystem/views/main/bookachieve.ejs" />
-        <option value="$PROJECT_DIR$/examsystem/model/thesis.js" />
-        <option value="$PROJECT_DIR$/examsystem/model/master.js" />
-        <option value="$PROJECT_DIR$/examsystem/views/main/thesis.ejs" />
         <option value="$PROJECT_DIR$/examsystem/public/js/test/thesis.js" />
         <option value="$PROJECT_DIR$/examsystem/public/js/test/details.js" />
         <option value="$PROJECT_DIR$/examsystem/model/teachachieve.js" />
@@ -180,16 +81,35 @@
         <option value="$PROJECT_DIR$/examsystem/views/main/doubleware.ejs" />
         <option value="$PROJECT_DIR$/examsystem/views/main/doubleref.ejs" />
         <option value="$PROJECT_DIR$/examsystem/public/js/test/doubleref.js" />
-        <option value="$PROJECT_DIR$/examsystem/routes/routes_api.js" />
-        <option value="$PROJECT_DIR$/examsystem/routes/api.js" />
         <option value="$PROJECT_DIR$/examsystem/public/js/test/doublecourse.js" />
         <option value="$PROJECT_DIR$/examsystem/views/main/doublecourse.ejs" />
         <option value="$PROJECT_DIR$/examsystem/views/main/doubletest.ejs" />
         <option value="$PROJECT_DIR$/examsystem/public/js/test/doubletest.js" />
+        <option value="$PROJECT_DIR$/examsystem/views/index/doublelan.ejs" />
+        <option value="$PROJECT_DIR$/examsystem/model/testteach.js" />
+        <option value="$PROJECT_DIR$/examsystem/model/testtile.js" />
+        <option value="$PROJECT_DIR$/examsystem/model/testcourse.js" />
+        <option value="$PROJECT_DIR$/examsystem/model/testexample.js" />
+        <option value="$PROJECT_DIR$/examsystem/model/testteachware.js" />
+        <option value="$PROJECT_DIR$/examsystem/views/main/testteach.ejs" />
+        <option value="$PROJECT_DIR$/examsystem/public/js/test/testteach.js" />
+        <option value="$PROJECT_DIR$/examsystem/routes/routes_api.js" />
+        <option value="$PROJECT_DIR$/examsystem/routes/api.js" />
+        <option value="$PROJECT_DIR$/examsystem/public/js/test/testware.js" />
+        <option value="$PROJECT_DIR$/examsystem/views/main/testware.ejs" />
+        <option value="$PROJECT_DIR$/examsystem/views/main/testcourse.ejs" />
+        <option value="$PROJECT_DIR$/examsystem/public/js/test/testcourse.js" />
         <option value="$PROJECT_DIR$/examsystem/routes/admin.js" />
         <option value="$PROJECT_DIR$/examsystem/views/admin/details.ejs" />
+        <option value="$PROJECT_DIR$/examsystem/views/main/testexample.ejs" />
+        <option value="$PROJECT_DIR$/examsystem/public/js/test/testexample.js" />
+        <option value="$PROJECT_DIR$/examsystem/public/js/test/testtitle.js" />
+        <option value="$PROJECT_DIR$/examsystem/views/main/testtitle.ejs" />
         <option value="$PROJECT_DIR$/examsystem/routes/routes_admin.js" />
-        <option value="$PROJECT_DIR$/examsystem/views/index/doublelan.ejs" />
+        <option value="$PROJECT_DIR$/examsystem/views/index/testteach.ejs" />
+        <option value="$PROJECT_DIR$/examsystem/views/index/teachmove.ejs" />
+        <option value="$PROJECT_DIR$/examsystem/views/index/teachresult.ejs" />
+        <option value="$PROJECT_DIR$/examsystem/views/index/teachcontrolle.ejs" />
       </list>
     </option>
   </component>
@@ -229,7 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -261,10 +180,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -347,6 +262,10 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teachcourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -410,6 +329,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="毕业设计" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="毕业设计" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -417,6 +354,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -432,19 +370,19 @@
     <property name="SearchEverywhereHistoryKey" value="we&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\webstorm\毕业设计" />
-      <recent name="F:\webstorm\毕业设计\examsystem" />
-      <recent name="F:\webstorm\毕业设计\examsystem\public" />
-      <recent name="F:\webstorm\毕业设计\examsystem\public\css\index" />
-      <recent name="F:\webstorm\毕业设计\examsystem\public\css\test" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\webstorm\毕业设计\examsystem\public\js\test" />
       <recent name="F:\webstorm\毕业设计\examsystem\views\main" />
       <recent name="F:\webstorm\毕业设计\examsystem\model" />
       <recent name="F:\webstorm\毕业设计\examsystem\public\img" />
       <recent name="F:\webstorm\毕业设计\examsystem\views\index" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\webstorm\毕业设计" />
+      <recent name="F:\webstorm\毕业设计\examsystem" />
+      <recent name="F:\webstorm\毕业设计\examsystem\public" />
+      <recent name="F:\webstorm\毕业设计\examsystem\public\css\index" />
+      <recent name="F:\webstorm\毕业设计\examsystem\public\css\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -569,22 +507,24 @@
       <workItem from="1491745413969" duration="505000" />
       <workItem from="1491781812501" duration="11707000" />
       <workItem from="1491867476982" duration="12932000" />
-      <workItem from="1491955049467" duration="13827000" />
+      <workItem from="1491955049467" duration="14153000" />
+      <workItem from="1492040511342" duration="83000" />
+      <workItem from="1492040633133" duration="10263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145600000" />
+    <option name="totallyTimeSpent" value="156272000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18005952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25204584" sideWeight="0.7276786" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2405892" sideWeight="0.27232143" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23895253" sideWeight="0.27232143" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -606,173 +546,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/examsystem/views/index/teachresult.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2430">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/public/js/test/bookachieve.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="25" column="7" lean-forward="false" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/model/booksachieve.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/public/img/t01d9ef13ae355ada7e.jpg" />
-    <entry file="file://$PROJECT_DIR$/examsystem/public/img/BDD1D7F2AD559394D9722CAEC4AC84D3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/public/img/140I319B-1.jpg" />
-    <entry file="file://$PROJECT_DIR$/examsystem/public/img/94DF33058691854E9A0F6B2C94620DBB.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/public/img/ha.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/public/img/wangjing.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/views/main/bookachieve.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/views/main/thesis.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="57" column="28" lean-forward="false" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/public/js/test/thesis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="54" column="24" lean-forward="false" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-          <folding>
-            <marker date="1491878185984" expanded="true" signature="1038:1051" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/public/js/test/details.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/views/main/teachieve.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="49" column="6" lean-forward="true" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/public/js/test/teachieve.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding>
-            <marker date="1491957982228" expanded="true" signature="1044:1057" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/public/js/test/master.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="53" column="27" lean-forward="false" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="27" />
-          <folding>
-            <marker date="1491958839621" expanded="true" signature="1038:1051" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/views/main/master.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="37" column="45" lean-forward="false" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/model/thesis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/model/teachachieve.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/model/master.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/views/index/achieve.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="154" column="55" lean-forward="false" selection-start-line="154" selection-start-column="55" selection-end-line="154" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examsystem/public/js/test/doubleteacher.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="28" />
-          <folding>
-            <marker date="1491963042886" expanded="true" signature="1045:1058" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -780,7 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,9 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1490154764551" expanded="true" signature="1212:1225" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -798,9 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="77" selection-end-column="2" />
-          <folding>
-            <marker date="1491727898366" expanded="true" signature="1035:1048" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -808,7 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -816,9 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="53" column="27" lean-forward="false" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="27" />
-          <folding>
-            <marker date="1491964355755" expanded="true" signature="1042:1055" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -826,7 +597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
           <caret line="272" column="389" lean-forward="false" selection-start-line="272" selection-start-column="389" selection-end-line="272" selection-end-column="389" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -834,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,7 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -850,7 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="35" column="45" lean-forward="false" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -858,9 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="25" />
-          <folding>
-            <marker date="1491966454942" expanded="true" signature="1041:1054" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -868,7 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -876,7 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="39" column="76" lean-forward="false" selection-start-line="39" selection-start-column="76" selection-end-line="39" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,64 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="49" column="32" lean-forward="false" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/routes/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="55" column="27" lean-forward="false" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/public/js/test/doubletest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/routes/routes_api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="561" column="21" lean-forward="false" selection-start-line="561" selection-start-column="21" selection-end-line="561" selection-end-column="21" />
-          <folding>
-            <element signature="e#1513#3100#0" expanded="false" />
-            <element signature="e#3129#3935#0" expanded="false" />
-            <element signature="e#3965#4023#0" expanded="false" />
-            <element signature="e#4055#4649#0" expanded="false" />
-            <element signature="e#4691#5064#0" expanded="false" />
-            <element signature="e#5105#5244#0" expanded="false" />
-            <element signature="e#5286#5425#0" expanded="false" />
-            <element signature="e#5467#5603#0" expanded="false" />
-            <element signature="e#5636#5905#0" expanded="false" />
-            <element signature="e#5948#6086#0" expanded="false" />
-            <element signature="e#6120#6676#0" expanded="false" />
-            <element signature="e#6711#7109#0" expanded="false" />
-            <element signature="e#7157#7554#0" expanded="false" />
-            <element signature="e#7585#7721#0" expanded="false" />
-            <element signature="e#7768#8057#0" expanded="false" />
-            <element signature="e#8087#8227#0" expanded="false" />
-            <element signature="e#8259#8698#0" expanded="false" />
-            <element signature="e#8735#9064#0" expanded="false" />
-            <element signature="e#9093#9227#0" expanded="false" />
-            <element signature="e#9259#9800#0" expanded="false" />
-            <element signature="e#9832#9977#0" expanded="false" />
-            <element signature="e#10011#10153#0" expanded="false" />
-            <element signature="e#10189#10331#0" expanded="false" />
-            <element signature="e#10370#10751#0" expanded="false" />
-            <element signature="e#10788#11186#0" expanded="false" />
-            <element signature="e#11222#11747#0" expanded="false" />
-            <element signature="e#11786#12078#0" expanded="false" />
-            <element signature="e#12115#12257#0" expanded="false" />
-            <element signature="e#12289#12352#0" expanded="false" />
-            <element signature="e#12387#12733#0" expanded="false" />
-            <element signature="e#12768#12908#0" expanded="false" />
-            <element signature="e#12946#13263#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -949,19 +653,154 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="119" column="18" lean-forward="false" selection-start-line="119" selection-start-column="18" selection-end-line="119" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/model/doublelanteacher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/model/doublebooks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/model/doubleteachware.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/model/doublecourse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/model/doubletests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/views/index/doublelan.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="220" column="10" lean-forward="false" selection-start-line="220" selection-start-column="10" selection-end-line="220" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/model/doublereference.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/public/js/test/class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1490854865556" expanded="true" signature="519:532" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/public/js/test/testteach.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+          <folding>
+            <marker date="1492043368289" expanded="true" signature="519:532" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/views/main/testteach.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="41" column="17" lean-forward="true" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/routes/routes_api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="586" column="30" lean-forward="false" selection-start-line="586" selection-start-column="30" selection-end-line="586" selection-end-column="30" />
+          <folding>
+            <element signature="e#15561#15676#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/public/js/test/doubletest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="25" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/public/js/test/testware.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/views/main/testware.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="36" column="66" lean-forward="false" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/views/main/testcourse.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/public/js/test/testcourse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examsystem/views/admin/details.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="99" column="62" lean-forward="false" selection-start-line="99" selection-start-column="62" selection-end-line="99" selection-end-column="62" />
+        <state relative-caret-position="-323">
+          <caret line="109" column="63" lean-forward="false" selection-start-line="109" selection-start-column="63" selection-end-line="109" selection-end-column="63" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#form#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -981,149 +820,221 @@
             <element signature="n#div#18;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#19;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#20;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#form#0;n#div#20;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#21;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#22;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#23;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#24;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/routes/admin.js">
+    <entry file="file://$PROJECT_DIR$/examsystem/views/main/testexample.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="53" column="23" lean-forward="false" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="23" />
+        <state relative-caret-position="157">
+          <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/model/doublelanteacher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/model/doublebooks.js">
+    <entry file="file://$PROJECT_DIR$/examsystem/public/js/test/testexample.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="17" />
+          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/model/doubleteachware.js">
+    <entry file="file://$PROJECT_DIR$/examsystem/public/js/test/testtitle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="270">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/model/doublecourse.js">
+    <entry file="file://$PROJECT_DIR$/examsystem/views/main/testtitle.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="14" />
+        <state relative-caret-position="517">
+          <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/model/doubletests.js">
+    <entry file="file://$PROJECT_DIR$/examsystem/model/testteach.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/model/testtile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/model/testcourse.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="13" />
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/model/testexample.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/model/testteachware.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/views/index/testteach.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="211" column="71" lean-forward="false" selection-start-line="211" selection-start-column="71" selection-end-line="211" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examsystem/routes/routes_admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="594" column="41" lean-forward="false" selection-start-line="594" selection-start-column="32" selection-end-line="594" selection-end-column="41" />
+        <state relative-caret-position="293">
+          <caret line="797" column="39" lean-forward="false" selection-start-line="797" selection-start-column="39" selection-end-line="797" selection-end-column="39" />
           <folding>
-            <element signature="e#1916#2051#0" expanded="false" />
-            <element signature="e#2082#2205#0" expanded="false" />
-            <element signature="e#2240#2316#0" expanded="false" />
-            <element signature="e#2470#3098#0" expanded="false" />
-            <element signature="e#3148#3222#0" expanded="false" />
-            <element signature="e#3256#3290#0" expanded="false" />
-            <element signature="e#3325#3427#0" expanded="false" />
-            <element signature="e#3464#4015#0" expanded="false" />
-            <element signature="e#4047#4163#0" expanded="false" />
-            <element signature="e#4196#4316#0" expanded="false" />
-            <element signature="e#4358#4484#0" expanded="false" />
-            <element signature="e#4518#4642#0" expanded="false" />
-            <element signature="e#4675#6683#0" expanded="false" />
-            <element signature="e#6714#7160#0" expanded="false" />
-            <element signature="e#7194#7315#0" expanded="false" />
-            <element signature="e#7350#7475#0" expanded="false" />
-            <element signature="e#7527#7988#0" expanded="false" />
-            <element signature="e#8040#8535#0" expanded="false" />
-            <element signature="e#8579#8891#0" expanded="false" />
-            <element signature="e#8923#9044#0" expanded="false" />
-            <element signature="e#9078#9197#0" expanded="false" />
-            <element signature="e#9231#9354#0" expanded="false" />
-            <element signature="e#9385#9729#0" expanded="false" />
-            <element signature="e#9773#10419#0" expanded="false" />
-            <element signature="e#10452#10815#0" expanded="false" />
-            <element signature="e#10844#11426#0" expanded="false" />
-            <element signature="e#11459#11870#0" expanded="false" />
-            <element signature="e#11907#13448#0" expanded="false" />
-            <element signature="e#13486#15027#0" expanded="false" />
-            <element signature="e#15062#15186#0" expanded="false" />
-            <element signature="e#15223#15342#0" expanded="false" />
-            <element signature="e#15378#15510#0" expanded="false" />
-            <element signature="e#15545#15672#0" expanded="false" />
-            <element signature="e#15709#15833#0" expanded="false" />
-            <element signature="e#16738#17083#0" expanded="false" />
-            <element signature="e#17123#17182#0" expanded="false" />
-            <element signature="e#17219#17379#0" expanded="false" />
-            <element signature="e#17416#17469#0" expanded="false" />
-            <element signature="e#17505#19015#0" expanded="false" />
-            <element signature="e#19337#20862#0" expanded="false" />
-            <element signature="e#20899#22410#0" expanded="false" />
-            <element signature="e#22722#22961#0" expanded="false" />
-            <element signature="e#22999#23128#0" expanded="false" />
-            <element signature="e#23163#23473#0" expanded="false" />
-            <element signature="e#23514#23997#0" expanded="false" />
-            <element signature="e#24038#24168#0" expanded="false" />
-            <element signature="e#24204#25480#0" expanded="false" />
-            <element signature="e#25526#25918#0" expanded="false" />
-            <element signature="e#25951#26072#0" expanded="false" />
-            <element signature="e#26122#26489#0" expanded="false" />
-            <element signature="e#26525#26650#0" expanded="false" />
-            <element signature="e#26682#26957#0" expanded="false" />
-            <element signature="e#26990#27108#0" expanded="false" />
-            <element signature="e#27156#27291#0" expanded="false" />
-            <element signature="e#27327#27458#0" expanded="false" />
-            <element signature="e#27495#27923#0" expanded="false" />
-            <element signature="e#27967#28097#0" expanded="false" />
-            <element signature="e#28131#28253#0" expanded="false" />
-            <element signature="e#28289#28849#0" expanded="false" />
+            <element signature="e#2225#2360#0" expanded="false" />
+            <element signature="e#2391#2514#0" expanded="false" />
+            <element signature="e#2549#2625#0" expanded="false" />
+            <element signature="e#2779#3407#0" expanded="false" />
+            <element signature="e#3457#3531#0" expanded="false" />
+            <element signature="e#3565#3599#0" expanded="false" />
+            <element signature="e#3634#3736#0" expanded="false" />
+            <element signature="e#3773#4324#0" expanded="false" />
+            <element signature="e#4356#4472#0" expanded="false" />
+            <element signature="e#4505#4625#0" expanded="false" />
+            <element signature="e#4667#4793#0" expanded="false" />
+            <element signature="e#4827#4951#0" expanded="false" />
+            <element signature="e#4984#6992#0" expanded="false" />
+            <element signature="e#7023#7469#0" expanded="false" />
+            <element signature="e#7503#7624#0" expanded="false" />
+            <element signature="e#7659#7784#0" expanded="false" />
+            <element signature="e#7836#8297#0" expanded="false" />
+            <element signature="e#8349#8844#0" expanded="false" />
+            <element signature="e#8888#9200#0" expanded="false" />
+            <element signature="e#9232#9353#0" expanded="false" />
+            <element signature="e#9387#9506#0" expanded="false" />
+            <element signature="e#9540#9663#0" expanded="false" />
+            <element signature="e#9694#10038#0" expanded="false" />
+            <element signature="e#10082#10728#0" expanded="false" />
+            <element signature="e#10761#11124#0" expanded="false" />
+            <element signature="e#11153#11735#0" expanded="false" />
+            <element signature="e#11768#12179#0" expanded="false" />
+            <element signature="e#12216#13757#0" expanded="false" />
+            <element signature="e#13795#15336#0" expanded="false" />
+            <element signature="e#15371#15495#0" expanded="false" />
+            <element signature="e#15532#15651#0" expanded="false" />
+            <element signature="e#15687#15819#0" expanded="false" />
+            <element signature="e#15854#15981#0" expanded="false" />
+            <element signature="e#16018#16142#0" expanded="false" />
+            <element signature="e#16182#17008#0" expanded="false" />
+            <element signature="e#17047#17392#0" expanded="false" />
+            <element signature="e#17432#17491#0" expanded="false" />
+            <element signature="e#17528#17688#0" expanded="false" />
+            <element signature="e#17725#17778#0" expanded="false" />
+            <element signature="e#17814#19324#0" expanded="false" />
+            <element signature="e#19646#21171#0" expanded="false" />
+            <element signature="e#21208#22719#0" expanded="false" />
+            <element signature="e#22758#22815#0" expanded="false" />
+            <element signature="e#22852#22906#0" expanded="false" />
+            <element signature="e#23864#25390#0" expanded="false" />
+            <element signature="e#25510#27067#0" expanded="false" />
+            <element signature="e#27192#28710#0" expanded="false" />
+            <element signature="e#28927#30450#0" expanded="false" />
+            <element signature="e#30496#30735#0" expanded="false" />
+            <element signature="e#30773#30902#0" expanded="false" />
+            <element signature="e#30937#31247#0" expanded="false" />
+            <element signature="e#31288#31771#0" expanded="false" />
+            <element signature="e#31812#31942#0" expanded="false" />
+            <element signature="e#31978#33254#0" expanded="false" />
+            <element signature="e#33300#33692#0" expanded="false" />
+            <element signature="e#33725#33846#0" expanded="false" />
+            <element signature="e#33896#34263#0" expanded="false" />
+            <element signature="e#34299#34424#0" expanded="false" />
+            <element signature="e#34456#34731#0" expanded="false" />
+            <element signature="e#34764#34882#0" expanded="false" />
+            <element signature="e#34930#35065#0" expanded="false" />
+            <element signature="e#35101#35232#0" expanded="false" />
+            <element signature="e#35269#35697#0" expanded="false" />
+            <element signature="e#35741#35871#0" expanded="false" />
+            <element signature="e#35905#36027#0" expanded="false" />
+            <element signature="e#36063#36623#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/model/doublereference.js">
+    <entry file="file://$PROJECT_DIR$/examsystem/routes/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="255">
+          <caret line="58" column="24" lean-forward="false" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examsystem/views/index/classteach.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="213" column="10" lean-forward="true" selection-start-line="210" selection-start-column="8" selection-end-line="213" selection-end-column="10" />
+        <state relative-caret-position="152">
+          <caret line="209" column="10" lean-forward="true" selection-start-line="206" selection-start-column="7" selection-end-line="209" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examsystem/views/index/doublelan.ejs">
+    <entry file="file://$PROJECT_DIR$/examsystem/routes/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="220" column="10" lean-forward="false" selection-start-line="220" selection-start-column="10" selection-end-line="220" selection-end-column="10" />
+        <state relative-caret-position="225">
+          <caret line="57" column="26" lean-forward="false" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/views/index/teachingreform.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/views/index/teachmove.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="124" column="6" lean-forward="true" selection-start-line="116" selection-start-column="4" selection-end-line="124" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/views/index/teachresult.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="124" column="6" lean-forward="false" selection-start-line="124" selection-start-column="6" selection-end-line="124" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examsystem/views/index/teachcontrolle.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="124" column="6" lean-forward="false" selection-start-line="124" selection-start-column="6" selection-end-line="124" selection-end-column="6" />
           <folding />
         </state>
       </provider>

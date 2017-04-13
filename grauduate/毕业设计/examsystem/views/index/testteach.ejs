@@ -96,49 +96,72 @@
                 <ul class="arti">
                     <li class="contrucing">
                         <h3>实验教学的指导思想</h3>
-                        <div class="textar"></div>
+                        <div class="textar">
+                            <%=$_1[0].guiding%>
+                        </div>
                     </li>
                     <li class="artimsg">
                         <h3>实验题目及其参考答案</h3>
                         <table class="table table-bordered">
                             <tr>
-                                <td>实验内容</td>
-                                <td>实验题目</td>
-                                <td>题目格式</td>
-                                <td>下载</td>
-                                <td>答案格式</td>
+                                <td>实验题目（文档）</td>
+                                <td>题目下载</td>
+                                <td>答案（文档）</td>
                                 <td>答案下载</td>
                             </tr>
+                            <%for (var i=0;i<$_2.length;i++){%>
+                            <tr>
+                                <td><%=$_2[i].question%></td>
+                                <td class="text-center"><a class="exercise" href=""><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                                <td><%=$_2[i].answer%></td>
+                                <td class="text-center"><a class="exercise" href=""><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                            </tr>
+                            <%}%>
                         </table>
                     </li>
                     <li class="bookpre">
                         <h3>学生创新实践作业</h3>
                         <table class="table table-bordered">
                             <tr>
-                                <td>实验内容</td>
+                                <td>实验名称</td>
                                 <td>编程者</td>
                                 <td>格式</td>
                                 <td>下载</td>
                             </tr>
+                            <%for (var i=0;i<$_3.length;i++){%>
+                            <tr>
+                                <td><%=$_3[i].testname%></td>
+                                <td><%=$_3[i].author%></td>
+                                <td>文档</td>
+                                <td class="text-center"><a class="homework" href=""><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                            </tr>
+                            <%}%>
                         </table>
                     </li>
                     <li class="bookafter">
                         <h3>综合实例</h3>
                         <table class="table table-bordered">
                             <tr>
-                                <td>编号</td>
-                                <td>实验题目</td>
-                                <td>实验环境</td>
-                                <td>题目格式</td>
+                                <td>实验题目（文档）</td>
                                 <td>下载</td>
-                                <td>答案格式</td>
+                                <td>答案（文档）</td>
                                 <td>答案下载</td>
                             </tr>
+                            <%for (var i=0;i<$_4.length;i++){%>
+                            <tr>
+                                <td><%=$_4[i].question%></td>
+                                <td class="text-center"><a class="exercise" href=""><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                                <td><%=$_4[i].answers%></td>
+                                <td class="text-center"><a class="exercise" href=""><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                            </tr>
+                            <%}%>
                         </table>
                     </li>
                     <li class="bookcolor">
                         <h3>课程设计</h3>
-                        <div class="textar"></div>
+                        <div class="textar">
+                            <%=$_1[0].design%>
+                        </div>
                     </li>
                     <li class="reader">
                         <h3>实验课件</h3>
@@ -148,6 +171,13 @@
                                 <td>课件格式</td>
                                 <td>课件下载</td>
                             </tr>
+                            <%for (var i=0;i<$_5.length;i++){%>
+                            <tr>
+                                <td><%=$_5[i].warename%></td>
+                                <td>ZIP</td>
+                                <td class="text-center"><a class="ware" href=""><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                            </tr>
+                            <%}%>
                         </table>
                     </li>
                 </ul>
@@ -170,7 +200,18 @@
     }
     $(function () {
         $('.arti li').not(':first').hide();
-
+        $('.exercise').click(function () {
+            var path = "http://127.0.0.1/teachcourse/"+$(this).parent().prev().text()
+            $(this).attr('href',path)
+        })
+        $('.homework').click(function () {
+            var path = "http://127.0.0.1/teachcourse/"+$(this).parent().prev().prev().prev().text()
+            $(this).attr('href',path)
+        })
+        $('.ware').click(function () {
+            var path = "http://127.0.0.1/teachcourse/"+$(this).parent().prev().prev().text()
+            $(this).attr('href',path)
+        })
     })
 </script>
 </body>

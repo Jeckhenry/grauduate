@@ -30,6 +30,12 @@ const doublecourse = require('../model/doublecourse')//习题
 const doubleware = require('../model/doubleteachware')//课件
 const doubletests = require('../model/doubletests')//试卷
 const doublerefe = require('../model/doublereference')//参考书
+//实验教学
+const testteach = require('../model/testteach')//实验教学指导思想和课程设计
+const testtitle = require('../model/testtile')//实验教学题目及参考答案
+const testcourse = require('../model/testcourse')//实验教学创新实践作业
+const testexample = require('../model/testexample')//综合实例
+const testware = require('../model/testteachware')//实验教学课件
 
 
 function  adddatabase(database,message,res) {
@@ -779,8 +785,238 @@ exports.showdoubletest = (req,res)=>{
 
 //实验教学
 exports.showtestteach = (req,res)=>{
-    res.render('index/testteach')
+    testteach.find({}).then((result1)=>{
+        testtitle.find({}).then((result2)=>{
+            testcourse.find({}).then((result3)=>{
+                testexample.find({}).then((result4)=>{
+                    testware.find({}).then((result5)=>{
+                        res.render('index/testteach',{
+                            $_1:result1,
+                            $_2:result2,
+                            $_3:result3,
+                            $_4:result4,
+                            $_5:result5
+                        })
+                    })
+                })
+            })
+        })
+    })
 }
+exports.addtestteach = (req,res)=>{
+    resdata1.statusCode = 25
+    adddatabase(testteach,{
+        guiding:req.body.testguiding,
+        design:req.body.testdesigin,
+    },res)
+}
+exports.showtestteachs = (req,res)=>{
+    showmessage(testteach,'main/testteach',res)
+}
+exports.addtestware = (req,res)=>{
+    resdata1.statusCode = 26
+    if(req.url==='/addtestware'&&req.method.toLocaleLowerCase()=='post'){
+        var form = new formidable.IncomingForm();
+        form.uploadDir='./tmp'
+        form.parse(req, function(err, fields, files) {
+            if (err){
+                console.log(err)
+                return
+            }
+            var oldpath = files.testware.path
+            var newpath = "./public/teachcourse/"+files.testware.name
+            img_path = files.testware.name
+            if(!files.testware.type.includes('zip')){
+                resdata1.msg = '请上传压缩包类型'
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+                return
+            }
+            if(files.testware.size/1000>3000){
+                resdata1.msg = '文件不得大于3M'
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+                return
+            }
+            fs.rename(oldpath,newpath,function(err){
+                resdata1.msg = '上传成功'
+                //允许有同名同姓的教师存在
+                console.log(img_path)
+                testware.create({
+                    warename: img_path
+                },(err)=>{
+                    if (err){
+                        resdata1.msg = '添加失败'
+                        return
+                    }
+                    resdata1.msg = '添加成功'
+                })
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+            })
+        });
+    }
+}
+exports.showtestware = (req,res)=>{
+    showmessage(testware,'main/testware',res)
+}
+exports.addtestcourse = (req,res)=>{
+    resdata1.statusCode  =27
+    if(req.url==='/addtestcourse'&&req.method.toLocaleLowerCase()=='post'){
+        var form = new formidable.IncomingForm();
+        form.uploadDir='./tmp'
+        form.parse(req, function(err, fields, files) {
+            if (err){
+                console.log(err)
+                return
+            }
+            var oldpath = files.testname.path
+            var newpath = "./public/teachcourse/"+files.testname.name
+            img_path = files.testname.name
+            if(!files.testname.type.includes('application')){
+                resdata1.msg = '请上传文档类型'
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+                return
+            }
+            if(files.testname.size/1000>3000){
+                resdata1.msg = '文件不得大于3M'
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+                return
+            }
+            fs.rename(oldpath,newpath,function(err){
+                resdata1.msg = '上传成功'
+                testcourse.create({
+                    author:fields["testauthor"],
+                    testname:img_path
+                },(err)=>{
+                    if (err){
+                        resdata1.msg = '添加失败'
+                        console.log(err)
+                        return
+                    }
+                    resdata1.msg = '添加成功'
+                })
+                res.render('admin/details',{
+                    mes:resdata1
+                })
+            })
+        });
+    }
+}
+exports.showtestcourse = (req,res)=>{
+    showmessage(testcourse,'main/testcourse',res)
+}
+exports.addtesttitle = (req,res)=>{
+    resdata1.statusCode = 28
+    var img_path = new Array
+    var i=0;
+    //上传习题及答案
+    if(req.url==='/addtesttitle'&&req.method.toLocaleLowerCase()=='post'){
+        var form = new formidable.IncomingForm();
+        form.uploadDir='./tmp'
+        form.parse(req, function(err, fields, files) {
+            if (err){
+                console.log(err)
+                return
+            }
+            var newpath = "./public/teachcourse/"
+            for (var k in files){
+                img_path.push(files[k].name)
+                if(!files[k].type.includes('application')){
+                    resdata1.msg = '请上传文档类型'
+                    res.render('admin/details',{
+                        mes:resdata1
+                    })
+                    return
+                }
+                if(files[k].size/1000>3000){
+                    resdata1.msg = '文件不得大于3M'
+                    res.render('admin/details',{
+                        mes:resdata1
+                    })
+                    return
+                }
+                fs.rename(files[k].path,newpath+files[k].name,function(err){
+                    resdata1.msg = '上传成功'
+                })
+            }
+            testtitle.create({question:img_path[0],
+                answer:img_path[1]},(err)=>{
+                if (err){
+                    resdata1.msg = '添加失败'
+                    return
+                }
+                resdata1.msg = '添加成功'
+            })
+        });
+    }
+    res.render('admin/details',{
+        mes:resdata1
+    })
+}
+exports.showtesttitle = (req,res)=>{
+    showmessage(testtitle,'main/testtitle',res)
+}
+exports.showtestexample = (req,res)=>{
+    showmessage(testexample,'main/testexample',res)
+}
+exports.addtestexample = (req,res)=>{
+    resdata1.statusCode = 29
+    var img_path = new Array
+    var i=0;
+    //上传习题及答案
+    if(req.url==='/addtestexample'&&req.method.toLocaleLowerCase()=='post'){
+        var form = new formidable.IncomingForm();
+        form.uploadDir='./tmp'
+        form.parse(req, function(err, fields, files) {
+            if (err){
+                console.log(err)
+                return
+            }
+            var newpath = "./public/teachcourse/"
+            for (var k in files){
+                img_path.push(files[k].name)
+                if(!files[k].type.includes('application')){
+                    resdata1.msg = '请上传文档类型'
+                    res.render('admin/details',{
+                        mes:resdata1
+                    })
+                    return
+                }
+                if(files[k].size/1000>3000){
+                    resdata1.msg = '文件不得大于3M'
+                    res.render('admin/details',{
+                        mes:resdata1
+                    })
+                    return
+                }
+                fs.rename(files[k].path,newpath+files[k].name,function(err){
+                    resdata1.msg = '上传成功'
+                })
+            }
+            testexample.create({question:img_path[0],
+                answers:img_path[1]},(err)=>{
+                if (err){
+                    resdata1.msg = '添加失败'
+                    return
+                }
+                resdata1.msg = '添加成功'
+            })
+        });
+    }
+    res.render('admin/details',{
+        mes:resdata1
+    })
+}
+
+
 //网络教学
 exports.showinterTeach = (req,res)=>{
     interteach.find({}).then((result1)=>{

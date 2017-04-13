@@ -78,13 +78,19 @@
     <div class="row martop" style="background: white;">
         <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
             <div class="col-lg-2 borde col-md-2 col-sm-2 col-xs-2">
-                <ul>
-
+                <ul class="num">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
                 </ul>
             </div>
             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                 <ul class="arti">
-                   
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
                 </ul>
             </div>
         </div>
@@ -99,13 +105,23 @@
 <script type="text/javascript" src="/js/index/internet.js" ></script>
 <script type="text/javascript" src="/js/index/teacherpage.js"></script>
 <script>
-    function hit(li_ele){
+    function hit(li_ele,len,li_arr){
         $('ul.arti>li').hide();
-        $(li_ele).show()
+        for (var i=0;i<len;i++){
+            if (li_ele===i){
+                $(li_arr[i]).show()
+                return
+            }
+        }
     }
     $(function () {
+        var ul_num = $('.arti>li').length
+        var li_arry = $('.arti>li')
+        console.log(li_arry)
         $('.arti>li').not(':first').hide();
-
+        $('.num>li').click(function () {
+            hit($('.num').find('li').index($(this)),ul_num,li_arry)
+        })
     })
 </script>
 </body>

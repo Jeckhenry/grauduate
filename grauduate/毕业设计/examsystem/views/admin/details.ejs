@@ -66,6 +66,11 @@
             <li role="presentation"><a href="#doublerefmessage">双语教学参考文献</a></li>
             <li role="presentation"><a href="#doublecoursemessage">双语教学习题</a></li>
             <li role="presentation"><a href="#doubletestmessage">双语教学试卷</a></li>
+            <li role="presentation"><a href="#testteachmessage">实验教学信息</a></li>
+            <li role="presentation"><a href="#testwaremessage">实验教学课件</a></li>
+            <li role="presentation"><a href="#testcoursemessage">实验教学学生作业</a></li>
+            <li role="presentation"><a href="#testtitlemessage">实验教学题目及其答案</a></li>
+            <li role="presentation"><a href="#testexamplemessage">实验教学实例</a></li>
         </ul>
     </div>
     <!--题库操作部分-->
@@ -98,6 +103,11 @@
             <li role="presentation"><a href="/admin/doubleref" target="_blank">双语教学参考文献</a></li>
             <li role="presentation"><a href="/admin/doublecourse" target="_blank">双语教学习题</a></li>
             <li role="presentation"><a href="/admin/doubletest" target="_blank">双语教学试卷</a></li>
+            <li role="presentation"><a href="/admin/testteachs" target="_blank">实验教学信息</a></li>
+            <li role="presentation"><a href="/admin/testware" target="_blank">实验教学课件</a></li>
+            <li role="presentation"><a href="/admin/testcourse" target="_blank">实验教学学生作业</a></li>
+            <li role="presentation"><a href="/admin/testtitle" target="_blank">实验教学题目及答案</a></li>
+            <li role="presentation"><a href="/admin/testexample" target="_blank">实验教学实例</a></li>
         </ul>
         <div id="question">
         <h3>添加题目模块：</h3>
@@ -868,6 +878,122 @@
                     <button class="btn btn-primary" type="submit">确认添加</button>
                 </div>
                 <%if(mes.statusCode===24){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <div id="testteachmessage">
+            <br>
+            <h3>添加实验教学信息：</h3>
+            <!--此代码后期删除-->
+            <h5 style="color: red;" class="text-center">友情提示：修改请进入具体页面进行！！否则无法生效！</h5>
+            <form action="/admin/addtestteach" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="testguiding" class="col-md-5 control-label">指导思想：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="testguiding"  class="form-control" name="testguiding">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="testdesigin" class="col-md-5 control-label">课程设计：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="testdesigin"  class="form-control" name="testdesigin">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===25){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <div id="testwaremessage">
+            <br>
+            <h3>添加实验教学课件：</h3>
+            <form action="/admin/addtestware" enctype="multipart/form-data" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="testware" class="col-md-5 control-label">实验教学课件：</label>
+                    <div class="col-md-4">
+                        <input type="file" id="testware"  class="form-control" name="testware">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===26){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <div id="testcoursemessage">
+            <br>
+            <h3>添加实验教学学生实践作业：</h3>
+            <form action="/admin/addtestcourse" enctype="multipart/form-data" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="testauthor" class="col-md-5 control-label">学生姓名：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="testauthor"  class="form-control" name="testauthor">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="testname" class="col-md-5 control-label">学生作业：</label>
+                    <div class="col-md-4">
+                        <input type="file" id="testname"  class="form-control" name="testname">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===27){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <div id="testtitlemessage">
+            <br>
+            <h3>上传实验教学题目及答案：</h3>
+            <form action="/admin/addtesttitle" method="post" enctype="multipart/form-data" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="testtitlename" class="col-md-5 control-label">上传习题（doc）：</label>
+                    <div class="col-md-4">
+                        <input type="file" id="testtitlename" class="form-control" name="testtitlename">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="testtitleans" class="col-md-5 control-label">上传习题答案（doc）：</label>
+                    <div class="col-md-4">
+                        <input type="file" id="testtitleans" class="form-control" name="testtitleans">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:10px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===28){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <div id="testexamplemessage">
+            <br>
+            <h3>上传综合实例：</h3>
+            <form action="/admin/addtestexample" method="post" enctype="multipart/form-data" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="testexamplename" class="col-md-5 control-label">上传题目（doc）：</label>
+                    <div class="col-md-4">
+                        <input type="file" id="testexamplename" class="form-control" name="testexamplename">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="testexampleans" class="col-md-5 control-label">上传答案（doc）：</label>
+                    <div class="col-md-4">
+                        <input type="file" id="testexampleans" class="form-control" name="testexampleans">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:10px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===29){%>
                 <p class="msg"><%=mes.msg%></p>
                 <%}%>
             </form>
