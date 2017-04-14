@@ -2,16 +2,16 @@
     font-family: "宋体";
     margin:0;
     padding:0;
-    font-size: 20px;
+    font-size: 16px;
 }
 body{
     background: #CCCCCC;
 }
 .firstwid{
-    width:80%;
+    width:85%;
     background: white;
     margin:0 auto;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 .firstwid img{
     max-width: 60%;
@@ -52,6 +52,9 @@ body{
 }
 .nav-pills a:hover{
     color: red;
+}
+.character{
+    font-size: 1.5em;
 }
 
 
