@@ -12,7 +12,9 @@ $(function () {
             url:'/api/deltestexample',
             method:'post',
             data:{
-                middle:$_middle
+                middle:$_middle,
+                file1:$(this).parent().prev().prev().text(),
+                file2:$(this).parent().prev().text()
             },
             dataType:'json',
             success:(res)=>{

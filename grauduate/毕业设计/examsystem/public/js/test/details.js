@@ -2,6 +2,7 @@
  * Created by sunshine on 2017/3/14.
  */
 $(function(){
+    $('input[type="file"]').wrap('<a href="javascript:;" class="file">选择文件</a>')
     $('#back').click(()=>{
         window.location.href = 'http://127.0.0.1/main'
     })

@@ -12,7 +12,8 @@ $(function () {
             url:'/api/deltestware',
             method:'post',
             data:{
-                middle:$_middle
+                middle:$_middle,
+                file:$(this).parent().prev().prev().text()
             },
             dataType:'json',
             success:(res)=>{

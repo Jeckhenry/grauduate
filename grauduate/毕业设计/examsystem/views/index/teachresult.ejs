@@ -48,6 +48,9 @@
             line-height: 2em;
             text-indent: 2em;
         }
+        .num li{
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="bodyback">
@@ -79,18 +82,16 @@
         <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
             <div class="col-lg-2 borde col-md-2 col-sm-2 col-xs-2">
                 <ul class="num">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
+                    <%for(var i=0;i<results.length;i++){%>
+                    <li><%=results[i].msglead%></li>
+                    <%}%>
                 </ul>
             </div>
             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                 <ul class="arti">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
+                    <%for(var i=0;i<results.length;i++){%>
+                    <li><div class="textar"><%=results[i].msg%></div></li>
+                    <%}%>
                 </ul>
             </div>
         </div>

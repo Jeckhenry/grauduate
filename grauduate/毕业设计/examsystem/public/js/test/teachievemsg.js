@@ -6,12 +6,10 @@ $(function () {
         $('#middle').val($(this).parent().parent().find('td:first').text())
         var $_middle = $('#middle').val()
         $.ajax({
-            url:'/api/delexercise',
+            url:'/api/delteachievemsg',
             method:'post',
             data:{
-                middle:$_middle,
-                file1:$(this).parent().prev().text(),
-                file2:$(this).parent().prev().prev().text()
+                middle:$_middle
             },
             dataType:'json',
             success:(res)=>{
@@ -44,16 +42,16 @@ $(function () {
             $('#middle').val($(this).parent().parent().find('td:first').text())
             var parent = $(this).parent().parent()
             var $_middle = $('#middle').val()
-            var $_site1 = parent.find('[name="clmsg"]').text()
-            var $_site2 = parent.find('[name="clfea"]').text()
+            var $_1 = parent.find('[name="lead"]').text()
+            var $_2 = parent.find('[name="msg"]').text()
             $.ajax({
-                url: '/api/changeexercise',
+                url: '/api/changeteachievemsg',
                 method: 'post',
                 async: false,
                 data: {
                     middle: $_middle,
-                    auhtname:$_site1,
-                    can:$_site2
+                    example:$_1,
+                    exercise:$_2
                 },
                 dataType: 'json',
                 success: (res) => {

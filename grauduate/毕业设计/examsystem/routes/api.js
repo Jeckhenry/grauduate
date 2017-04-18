@@ -59,5 +59,9 @@ router.post('/deltesttitle',route.deltesttitle)
 router.post('/deltestcourse',route.deltestcourse)
 router.post('/deltestexample',route.deltestexample)
 router.post('/deltestware',route.deltestware)
+router.post('/delteachievemsg',route.delteachievemsg)
+router.post('/delteachconmsg',route.delteachconmsg)
+router.post('/changeteachievemsg',route.changeteachievemsg)
+router.post('/changeteachconmsg',route.changeteachconmsg)
 
 module.exports = router

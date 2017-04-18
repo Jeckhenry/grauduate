@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/test/public.css">
-    <title>双语教学课件信息</title>
+    <title>教学管理信息</title>
 </head>
 <body>
 <div class="container">
@@ -15,7 +15,7 @@
             <img src="/img/top1_r1_c1.gif" alt="..">
         </div>
         <div class="col-lg-6 visible-lg character">
-            双语教学课件信息
+            教学管理信息
         </div>
     </div>
     <hr/>
@@ -26,15 +26,18 @@
         <table class="table table-bordered table-responsive model">
             <thead>
             <th class="text-center">ID</th>
-            <th class="text-center">文件名</th>
+            <th class="text-center">教学管理导航</th>
+            <th class="text-center">教学管理信息</th>
             <th class="text-center">操作</th>
             </thead>
             <tbody>
             <%for(var i=0;i<$_result.length;i++){%>
             <tr>
                 <td><%=$_result[i]._id%></td>
-                <td name="auth" class="ar"><%=$_result[i].teachname%></td>
+                <td name="lead" class="ar"><%=$_result[i].msglead%></td>
+                <td name="msg" class="ar"><%=$_result[i].msg%></td>
                 <td  class="text-center">
+                    <input type="button" class="cha btn" value="修改"></input>
                     <input type="button" class="del btn" value="删除"></input>
                 </td>
             </tr>
@@ -48,6 +51,6 @@
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.js"></script>
 <script src="/js/angular_1.5.8.min.js"></script>
-<script src="/js/test/doubleware.js"></script>
+<script src="/js/test/teachconmsg.js"></script>
 </body>
 </html>

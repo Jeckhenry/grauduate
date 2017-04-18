@@ -32,7 +32,9 @@ const testtitle = require('../model/testtile')//实验教学题目及参考答�
 const testcourse = require('../model/testcourse')//实验教学创新实践作业
 const testexample = require('../model/testexample')//综合实例
 const testware = require('../model/testteachware')//实验教学课件
-
+const teachievemsg  = require('../model/teachievemsg')
+const teachconmsg = require('../model/teachconmsg')
+const fs = require('fs')
 
 var resdata;
 exports.initData = (req,res,next)=>{
@@ -357,21 +359,47 @@ exports.changecal = (req,res)=>{
         res.end()
     })
 }
-exports.delcourse = (req,res)=>{
+//删除一个文件
+function  delonefile(req,res,database) {
     var contion = req.body.middle;
-    teachingcourse.remove({_id:contion},(err,req)=>{
+    fs.unlink('./public/teachcourse/'+req.body.file,(err)=>{
         if (err){
+            console.log(err)
             return
         }
+        console.log('success')
+        database.remove({_id:contion},(err,req)=>{
+            if (err){
+                return
+            }
+        })
     })
 }
-exports.delexercise = (req,res)=>{
+function  deltwofile(req,res,database) {
     var contion = req.body.middle;
-    teacinghome.remove({_id:contion},(err,req)=>{
+    fs.unlink('./public/teachcourse/'+req.body.file1,(err)=>{
         if (err){
+            console.log(err)
             return
         }
+        fs.unlink('./public/teachcourse/'+req.body.file2,(err)=>{
+            if (err){
+                console.log(err)
+                return
+            }
+            database.remove({_id:contion},(err,req)=>{
+                if (err){
+                    return
+                }
+            })
+        })
     })
+}
+exports.delcourse = (req,res)=>{
+    delonefile(req,res,teachingcourse)
+}
+exports.delexercise = (req,res)=>{
+    deltwofile(req,res,teacinghome)
 }
 exports.delimportants = (req,res)=>{
     var contion = req.body.middle;
@@ -552,7 +580,7 @@ exports.changedoublebook = (req,res)=>{
     },res)
 }
 exports.deldoublewares = (req,res)=>{
-    delmseeage(req,doubleware)
+delonefile(req,res,doubleware)
 }
 exports.deldoubleref = (req,res)=>{
     delmseeage(req,doublerefe)
@@ -563,10 +591,10 @@ exports.changedoubleref = (req,res)=>{
     },res)
 }
 exports.deldoublecourse = (req,res)=>{
-    delmseeage(req,doublecourse)//习题
+    delonefile(req,res,doublecourse)
 }
 exports.deldoubletest = (req,res)=>{
-    delmseeage(req,doubletests)//试卷
+    delonefile(req,res,doubletests)
 }
 exports.changetestteach = (req,res)=>{
     changemessage(req,testteach,{
@@ -575,14 +603,32 @@ exports.changetestteach = (req,res)=>{
     },res)
 }
 exports.deltestware = (req,res)=>{
-    delmseeage(req,testware)
+    delonefile(req,res,testware)
 }
 exports.deltestcourse = (req,res)=>{
-    delmseeage(req,testcourse)
+    delonefile(req,res,testcourse)
 }
 exports.deltesttitle = (req,res)=>{
-    delmseeage(req,testtitle)
+    deltwofile(req,res,testtitle)
 }
 exports.deltestexample = (req,res)=>{
-    delmseeage(req,testexample)
+    deltwofile(req,res,testexample)
+}
+exports.delteachievemsg = (req,res)=>{
+    delmseeage(req,teachievemsg)
+}
+exports.delteachconmsg = (req,res)=>{
+    delmseeage(req,teachconmsg)
+}
+exports.changeteachievemsg = (req,res)=>{
+    changemessage(req,teachievemsg,{
+        msglead:req.body.example,
+        msg:req.body.exercise
+    },res)
+}
+exports.changeteachconmsg = (req,res)=>{
+    changemessage(req,teachconmsg,{
+        msglead:req.body.example,
+        msg:req.body.exercise
+    },res)
 }

@@ -36,7 +36,8 @@ const testtitle = require('../model/testtile')//实验教学题目及参考答�
 const testcourse = require('../model/testcourse')//实验教学创新实践作业
 const testexample = require('../model/testexample')//综合实例
 const testware = require('../model/testteachware')//实验教学课件
-
+const teachievemsg = require('../model/teachievemsg')//教学效果
+const teachconmsg = require('../model/teachconmsg')//教学管理
 
 function  adddatabase(database,message,res) {
     database.create(message,(err)=>{
@@ -642,8 +643,8 @@ exports.adddoubleware = (req,res)=>{
             var oldpath = files.doubleware.path
             var newpath = "./public/teachcourse/"+files.doubleware.name
             img_path = files.doubleware.name
-            if(!files.doubleware.type.includes('application')){
-                resdata1.msg = '请上传文档类型'
+            if(!files.doubleware.type.includes('zip')){
+                resdata1.msg = '请上传压缩包类型'
                 res.render('admin/details',{
                     mes:resdata1
                 })
@@ -1015,8 +1016,6 @@ exports.addtestexample = (req,res)=>{
         mes:resdata1
     })
 }
-
-
 //网络教学
 exports.showinterTeach = (req,res)=>{
     interteach.find({}).then((result1)=>{
@@ -1259,11 +1258,39 @@ exports.addtestreform = (req,res)=>{
 
 //教学效果
 exports.showteachresult  = (req,res)=>{
-    res.render('index/teachresult')
+    teachconmsg.find({}).then((result)=>{
+        res.render('index/teachresult',{
+            results:result
+        })
+    })
+}
+exports.addteachieve = (req,res)=>{
+    resdata1.statusCode = 31
+    adddatabase(teachievemsg,{
+        msglead:req.body.teachachieve,
+        msg:req.body.teachachievemsg
+    },res)
+}
+exports.showteachievemsg = (req,res)=>{
+    showmessage(teachievemsg,'main/teachievemsg',res)
 }
 //教学管理
 exports.showteachcon = (req,res)=>{
-    res.render('index/teachcontrolle')
+    teachconmsg.find({}).then((result)=>{
+        res.render('index/teachcontrolle',{
+            results:result
+        })
+    })
+}
+exports.addteachcontromsg = (req,res)=>{
+    resdata1.statusCode = 30
+    adddatabase(teachconmsg,{
+        msglead:req.body.teachcontroll,
+        msg:req.body.teachcontromsg
+    },res)
+}
+exports.showteachconmsg = (req,res)=>{
+    showmessage(teachconmsg,'main/teachconmsg',res)
 }
 //教学录像
 exports.showteachmove = (req,res)=>{

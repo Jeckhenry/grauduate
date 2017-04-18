@@ -74,6 +74,9 @@
             <li role="presentation"><a href="#testcoursemessage">实验教学学生作业</a></li>
             <li role="presentation"><a href="#testtitlemessage">实验教学题目及其答案</a></li>
             <li role="presentation"><a href="#testexamplemessage">实验教学实例</a></li>
+            <li role="presentation"><a href="#">教学录像</a></li>
+            <li role="presentation"><a href="#teachievemsgmessage">教学管理</a></li>
+            <li role="presentation"><a href="#teachconmsgmessage">教学效果</a></li>
         </ul>
     </div>
     <!--题库操作部分-->
@@ -111,6 +114,9 @@
             <li role="presentation"><a href="/admin/testcourse" target="_blank">实验教学学生作业</a></li>
             <li role="presentation"><a href="/admin/testtitle" target="_blank">实验教学题目及答案</a></li>
             <li role="presentation"><a href="/admin/testexample" target="_blank">实验教学实例</a></li>
+            <li role="presentation"><a href="/admin/" target="_blank">教学录像</a></li>
+            <li role="presentation"><a href="/admin/teachievemsg" target="_blank">教学管理</a></li>
+            <li role="presentation"><a href="/admin/teachconmsg" target="_blank">教学效果</a></li>
         </ul>
         <div id="question">
         <h3>添加题目模块：</h3>
@@ -473,7 +479,7 @@
             <h3>添加教学课件：</h3>
             <form action="/admin/addteachcourse" method="post" enctype="multipart/form-data" class="form-horizontal center">
                 <div class="form-group">
-                    <label for="teachcourse" class="col-md-5 control-label">上传课件（以教师名命名）：</label>
+                    <label for="teachcourse" class="col-md-5 control-label">上传课件（以教师名命名.ZIP）：</label>
                     <div class="col-md-4">
                         <input type="file" id="teachcourse" class="form-control" name="teachcourse">
                     </div>
@@ -818,7 +824,7 @@
             <h3>添加双语教学课件：</h3>
             <form action="/admin/adddoubleware" enctype="multipart/form-data" method="post" class="form-horizontal center">
                 <div class="form-group">
-                    <label for="doubleware" class="col-md-5 control-label">上传课件：</label>
+                    <label for="doubleware" class="col-md-5 control-label">上传课件(.ZIP)：</label>
                     <div class="col-md-4">
                         <input type="file" id="doubleware" class="form-control" name="doubleware">
                     </div>
@@ -854,7 +860,7 @@
             <h3>添加双语教学习题：</h3>
             <form action="/admin/adddoublecourse" enctype="multipart/form-data" method="post" class="form-horizontal center">
                 <div class="form-group">
-                    <label for="doublecourse" class="col-md-5 control-label">习题（章节）：</label>
+                    <label for="doublecourse" class="col-md-5 control-label">习题（docx）：</label>
                     <div class="col-md-4">
                         <input type="file" id="doublecourse"  class="form-control" name="doublecourse">
                     </div>
@@ -872,7 +878,7 @@
             <h3>添加双语教学试卷：</h3>
             <form action="/admin/adddoubletest" enctype="multipart/form-data" method="post" class="form-horizontal center">
                 <div class="form-group">
-                    <label for="doubletest" class="col-md-5 control-label">试卷：</label>
+                    <label for="doubletest" class="col-md-5 control-label">试卷(文档)：</label>
                     <div class="col-md-4">
                         <input type="file" id="doubletest"  class="form-control" name="doubletest">
                     </div>
@@ -916,7 +922,7 @@
             <h3>添加实验教学课件：</h3>
             <form action="/admin/addtestware" enctype="multipart/form-data" method="post" class="form-horizontal center">
                 <div class="form-group">
-                    <label for="testware" class="col-md-5 control-label">实验教学课件：</label>
+                    <label for="testware" class="col-md-5 control-label">实验教学课件(.ZIP)：</label>
                     <div class="col-md-4">
                         <input type="file" id="testware"  class="form-control" name="testware">
                     </div>
@@ -940,7 +946,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="testname" class="col-md-5 control-label">学生作业：</label>
+                    <label for="testname" class="col-md-5 control-label">学生作业(文档)：</label>
                     <div class="col-md-4">
                         <input type="file" id="testname"  class="form-control" name="testname">
                     </div>
@@ -1001,6 +1007,58 @@
                 <%}%>
             </form>
         </div>
+        <!--教学管理-->
+        <div id="teachievemsgmessage">
+            <br>
+            <h3>添加教学管理信息：</h3>
+            <form action="/admin/addteachcontromessage" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="teachcontroll" class="col-md-5 control-label">教学管理信息导航：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachcontroll" placeholder="请输入教学管理信息导航" class="form-control" name="teachcontroll">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachcontromsg" class="col-md-5 control-label">教学管理信息：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachcontromsg" placeholder="请输入教学管理信息" class="form-control" name="teachcontromsg">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===30){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--教学效果-->
+        <div id="teachconmsgmessage">
+            <br>
+            <h3>添加教学效果信息：</h3>
+            <form action="/admin/addteachievemessage" method="post" class="form-horizontal center">
+                <div class="form-group">
+                    <label for="teachachieve" class="col-md-5 control-label">教学效果信息导航：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachachieve" placeholder="请输入教学效果信息导航" class="form-control" name="teachachieve">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="teachachievemsg" class="col-md-5 control-label">教学效果信息：</label>
+                    <div class="col-md-4">
+                        <input type="text" id="teachachievemsg" placeholder="请输入教学效果信息" class="form-control" name="teachachievemsg">
+                    </div>
+                </div>
+                <div class="col-md-10 col-md-offset-4" style="padding-left:4px;">
+                    <button class="btn btn-primary" type="submit">确认添加</button>
+                </div>
+                <%if(mes.statusCode===31){%>
+                <p class="msg"><%=mes.msg%></p>
+                <%}%>
+            </form>
+        </div>
+        <!--上传教学视频-->
+
 </div>
 
 
